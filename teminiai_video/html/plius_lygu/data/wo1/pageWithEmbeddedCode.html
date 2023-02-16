@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="msapplication-tap-highlight" content="no" />
+<title></title>
+
+<script type="text/javascript">
+
+var embeddedCode = "<iframe src=\"https:\/\/player.vimeo.com\/video\/799393630?h=e18777aa5f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" width=\"100%\" height=\"100%\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen title=\"Plius lygu ir pana&amp;scaron;ios i&amp;scaron;rai&amp;scaron;kos\"><\/iframe>";
+var replaceableTags = ["iframe", "embed", "img", "script", "video", "audio"];
+
+function getProtocol()
+{
+	return "http:";
+}
+
+function fixAddressInAttribute(htmlTag, attributeName)
+{
+	var attr = htmlTag.getAttribute(attributeName);
+	if (attr)
+	{
+		if (attr.search("//") == 0)
+		{
+			var newPath = getProtocol() + attr;
+			htmlTag.setAttribute(attributeName, newPath);
+		}
+	}
+}
+
+function fixDataAttribute(htmlTag)
+{
+	fixAddressInAttribute(htmlTag, "data");
+}
+
+function fixValueAttribute(htmlTag)
+{
+	var name = htmlTag.getAttribute("name");
+	if (
+		(name == "movie") || // swf
+		(name == "source") // sliverlight
+		)
+	{
+		fixAddressInAttribute(htmlTag, "value");
+	}
+}
+
+function fixSrcAttribute(htmlTag)
+{
+	fixAddressInAttribute(htmlTag, "src");
+}
+
+function fixSourceTags(htmlTag)
+{
+	var sourceTags = htmlTag.getElementsByTagName("source");
+	for (var i = 0; i < sourceTags.length;  ++i)
+	{
+		fixSrcAttribute(sourceTags[i]);
+	}
+}
+
+function fixObjectTag(htmlTag)
+{
+	fixDataAttribute(htmlTag);
+	
+	var paramTags = htmlTag.getElementsByTagName("param");
+	for (var i = 0; i < paramTags.length; ++i)
+	{
+		fixValueAttribute(paramTags[i]);
+	}
+}
+
+function addEmbedCodeTag(embeddedCodeObject)
+{
+	var body = document.getElementsByTagName("body")[0];
+	body.innerHTML = embeddedCodeObject.innerHTML;
+}
+
+function processChildren(parentTag)
+{
+    if (parentTag.tagName === undefined)
+    {
+        return;
+    }
+
+    var tagName = parentTag.tagName.toLowerCase();
+    for (var j = 0; j < replaceableTags.length; ++j)
+    {
+        if (replaceableTags[j] == tagName)
+        {
+            fixSrcAttribute(parentTag);
+        }
+    }
+
+    switch (tagName)
+    {
+        case "audio": case "video":
+        {
+            fixSourceTags(parentTag);
+            break;
+        }
+        case "object":
+        {
+            fixObjectTag(parentTag);
+            break;
+        }
+        default:
+            break;
+    }
+
+    for (var i = 0; i < parentTag.childNodes.length; ++i)
+    {
+        var child = parentTag.childNodes[i];
+        processChildren(child);
+    }
+}
+
+function removeObjectClsid(text)
+{
+    return text.replace(RegExp("classid *= *\\\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\\\""), "");
+}
+
+function addProtocolToEmbeddedCode()
+{
+    var embeddedCodeObject = document.createElement("div");
+    if (location.protocol == "file:")
+    {
+        embeddedCode = removeObjectClsid(embeddedCode);
+    }
+    embeddedCodeObject.innerHTML = embeddedCode;
+    if (location.protocol == "file:")
+    {
+        processChildren(embeddedCodeObject);
+    }
+    addEmbedCodeTag(embeddedCodeObject);
+}
+</script>
+
+</head>
+<body onload="addProtocolToEmbeddedCode()">
+</body>
+</html>
