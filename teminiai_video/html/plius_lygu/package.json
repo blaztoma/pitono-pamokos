@@ -1,0 +1,23 @@
+{
+  "name": "Plius lygu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myscripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sw-precache": "sw-precache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blaztoma/pitono-pamokos.git"
+  },
+  "author": "Tomas Blazauskas, Ieva Jaksaityte, Eimutis Karciauskas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blaztoma/pitono-pamokos/issues"
+  },
+  "homepage": "https://github.com/blaztoma/pitono-pamokos#readme"
+  "dependencies": {
+    "sw-precache": "^5.2.1"
+  }
+}

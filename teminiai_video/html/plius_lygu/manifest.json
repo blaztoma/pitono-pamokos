@@ -1,0 +1,27 @@
+{
+  "name": "Plius lygu",
+  "short_name": "Plius-lygu",
+  "start_url": "index.html",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "python_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "python_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "maskable_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#ffd31d",
+  "background_color": "#333",
+  "display": "standalone"
+}
