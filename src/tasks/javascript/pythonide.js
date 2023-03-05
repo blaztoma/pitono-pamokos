@@ -26,6 +26,14 @@
 var intervalFuncVars = [];
 var timeoutFuncVars = [];
 
+var tests;
+var testinput;
+var testoutput;
+var testresult = ""
+var testresults = [];
+var parms;
+var the_skeleton;
+
 // Stops any asynchronous functions still running
 var stopit = function () {
     for (var i = 0; i < intervalFuncVars.length; i++) {
@@ -41,22 +49,6 @@ var stopit = function () {
 
 // Capture the uncaught exception handler
 var saveUncaughtException = Sk.uncaughtException;
-
-Sk.configure({
-    inputfun: stdinInput,
-    inputfunTakesPrompt: true
-});
-
-// example function with promise
-
-function stdinInput(prompt) {
-    return new Promise((resolve, reject) => {
-        // ToDo: output prompt
-        // ToDo: get input string
-        let input = "5";
-        resolve(input);
-    });
-}
 
 // Must capture the setInterval function so that processing errors
 // are caught and sent to the output and so we know which asynchronous
@@ -212,6 +204,21 @@ function setupPythonIDE (codeId,outputId,canvasId) {
         restoreAsync();
     } 
 
+    function stdinInput(prompt) {
+        return new Promise((resolve, reject) => {
+            resolve(testinput);
+        });
+    }
+
+    function stdoutOutput(text) {
+        return new Promise((resolve, reject) => {
+            testresult = testresult + text;
+            //var mypre = document.getElementById(outputId); 
+            //mypre.innerHTML += testresult; 
+            resolve(text);
+        });
+    }
+
     // Evaluation using tests
     /*
     is failo, paziureti veliau
@@ -236,7 +243,7 @@ function setupPythonIDE (codeId,outputId,canvasId) {
                Sk.tg.turtleList = [];
            }
         }
-        Sk.configure({output:outf, read:builtinRead}); 
+        Sk.configure({inputfun: stdinInput, inputfunTakesPrompt: true, output:stdoutOutput, read:builtinRead}); 
         (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = canvasId;
 
 
@@ -285,7 +292,8 @@ function setupPythonIDE (codeId,outputId,canvasId) {
         });
 
         myPromise.then(function(mod) {
-        // console.log('success');
+            registerTestResult();
+            proceedTests();
         },
            Sk.uncaughtException 
         );

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tests>
+    <test id="test_1">
+        <input>5</input>
+        <output>25&#10;</output>
+    </test>
+    <test id="test_2">
+        <input>3</input>
+        <output>9&#10;</output>
+    </test>
+</tests>
