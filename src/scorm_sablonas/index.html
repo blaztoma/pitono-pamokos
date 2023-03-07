@@ -112,8 +112,16 @@
     }
 
     function testIt() {
-            testinput = tests[currenttest].getElementsByTagName("input")[0].childNodes[0].nodeValue;
-            testoutput = tests[currenttest].getElementsByTagName("output")[0].childNodes[0].nodeValue;
+            if(tests[currenttest].getElementsByTagName("input")[0].childNodes[0]) {
+                testinput = tests[currenttest].getElementsByTagName("input")[0].childNodes[0].nodeValue;
+            } else {
+                testinput = "";
+            }
+            if(tests[currenttest].getElementsByTagName("output")[0].childNodes[0]) {
+                testoutput = tests[currenttest].getElementsByTagName("output")[0].childNodes[0].nodeValue;
+            } else {
+                testoutput = "";                
+            }
             testresult = "";
             evalit();        
     }
