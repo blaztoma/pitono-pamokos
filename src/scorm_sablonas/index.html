@@ -149,8 +149,6 @@
     }
 
     function registerTestResult() {
-        console.log("B:" + testresult + ":");
-        console.log("C:" + testoutput + ":");
         if(testoutput == testresult) {
             is_correct = true;
             rawScore++;
@@ -424,12 +422,9 @@
 
     function setAnswer(number, testvalues, testres, is_correct)
     {
-        // console.log(number + " " + correct_nr + " " + answer_nr + " " + is_correct);
-
         scorm.SetInteractionValue("cmi.interactions." + number + ".id","key" + number);
         scorm.SetInteractionValue("cmi.interactions." + number + ".type", "true-false");
         scorm.SetInteractionValue("cmi.interactions." + number + ".correct_responses.0.pattern", testvalues.substring(0, 1000));
-        
         scorm.SetInteractionValue("cmi.interactions." + number + ".student_response", testres.substring(0, 1000));
         scorm.SetInteractionValue("cmi.interactions." + number + ".result", is_correct);
     }
@@ -441,14 +436,14 @@
       
         actualScore = Math.round(rawScore / numQuestions * 100);
     	var msg_str ="Your score is %d%%";            
-    	console.log(msg_str.replace("%d",actualScore).replace("%%","%"));  
+    	// console.log(msg_str.replace("%d",actualScore).replace("%%","%"));  
       
         scorm.SetScoreRaw(actualScore+"" );
         scorm.SetScoreMax(100);
         scorm.SetScoreMin(0);
       
         masteryScore = scorm.get("cmi.student_data.mastery_score");
-        console.log(masteryScore);
+        // console.log(masteryScore);
 
         var mode = scorm.GetMode();
 
