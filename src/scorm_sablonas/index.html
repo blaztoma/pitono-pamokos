@@ -157,6 +157,8 @@
     }
 
     function registerTestResult() {
+        testoutput = testoutput.replace(/^\s+|\s+$/g, '');
+        testresult = testresult.replace(/^\s+|\s+$/g, '');
         if(testoutput == testresult) {
             is_correct = true;
             rawScore++;
@@ -371,17 +373,24 @@
         $("#example_el").html("<h4>Pavyzdžiai:</h4>" + example[0].childNodes[0].nodeValue);
         task_id = task[0].getAttribute('id');
 
+        the_program = "";
+        if(skeleton[0].childNodes[0]) {
+            the_skeleton = skeleton[0].childNodes[0].nodeValue;
+        } else {
+            the_skeleton = "";                
+        }
+
         if(typeof(Storage) !== "undefined") {
-            the_skeleton = localStorage.getItem("skulptIdeProgram_" + task_id);
-            if(!the_skeleton) {
-                the_skeleton = skeleton[0].childNodes[0].nodeValue;
+            the_program = localStorage.getItem("skulptIdeProgram_" + task_id);
+            if(!the_program) {
+                the_program = the_skeleton;
             }
             the_name = localStorage.getItem("skulptIdeProgramName_" + task_id);
             if(!the_name) {
                 the_name = "programa.py";
             }
         } else {
-            the_skeleton = skeleton[0].childNodes[0].nodeValue;
+            the_program = the_skeleton;
             the_name = "programa.py";
         }
 
@@ -394,7 +403,7 @@
             showUrl: false,  // Whether to show an interactive button for showing an url for this sketch
         };
 
-        parms.program = the_skeleton;
+        parms.program = the_program;
         parms.programName = the_name;
 
         setupByParams();        
@@ -443,13 +452,14 @@
         computeTime();
       
         actualScore = Math.round(rawScore / numQuestions * 100);
-    	var msg_str ="Your score is %d%%";            
+    	var msg_str ="Jūs surinkote: %d%%";            
     	// console.log(msg_str.replace("%d",actualScore).replace("%%","%"));  
       
         scorm.SetScoreRaw(actualScore+"" );
         scorm.SetScoreMax(100);
         scorm.SetScoreMin(0);
       
+        scorm.SetInteractionValue("cmi.suspend_data", getProgram().substring(0, 5000));
         masteryScore = scorm.get("cmi.student_data.mastery_score");
         // console.log(masteryScore);
 
