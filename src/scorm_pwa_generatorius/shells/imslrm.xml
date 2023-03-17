@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lomCustom.xsd">
+	<general uniqueElementName="general">
+		<identifier>
+			<catalog uniqueElementName="catalog">Pitono mokymai</catalog>
+			<entry uniqueElementName="entry">4a7d755e-34a5-410a-a7d4</entry>
+		</identifier>
+		<title>
+			<string language="en">Kėlimas kvadratu</string>
+		</title>
+		<language>en</language>
+		<description>
+			<string language="en"><p>Para&scaron;ykite programą, kuri pakeltų skaičių kvadratu.</p></string>
+		</description>
+		<aggregationLevel uniqueElementName="aggregationLevel">
+			<source uniqueElementName="source">LOM-ESv1.0</source>
+			<value uniqueElementName="value">2</value>
+		</aggregationLevel>
+	</general>
+	<lifeCycle>
+		<contribute>
+			<role uniqueElementName="role">
+				<source uniqueElementName="source">LOM-ESv1.0</source>
+				<value uniqueElementName="value">author</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN:Tomas Blažauskas EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
+			<date>
+				<dateTime uniqueElementName="dateTime">2021-01-07T16:49:22.00+02:00</dateTime>
+				<description>
+					<string language="lt">Metadata creation date</string>
+				</description>
+			</date>
+		</contribute>
+	</lifeCycle>
+	<metaMetadata uniqueElementName="metaMetadata">
+		<contribute>
+			<role uniqueElementName="role">
+				<source uniqueElementName="source">LOM-ESv1.0</source>
+				<value uniqueElementName="value">creator</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN:Tomas Blažauskas EMAIL;TYPE=INTERNET: ORG: END:VCARD</entity>
+			<date>
+				<dateTime uniqueElementName="dateTime">2021-01-07T16:48:12.00+02:00</dateTime>
+				<description>
+					<string language="en">Metadata creation date</string>
+				</description>
+			</date>
+		</contribute>
+		<metadataSchema>LOM-ESv1.0</metadataSchema>
+		<language>en</language>
+	</metaMetadata>
+	<technical uniqueElementName="technical">
+		<otherPlatformRequirements>
+			<string language="en">editor: hands</string>
+		</otherPlatformRequirements>
+	</technical>
+	<educational>
+		<intendedEndUserRole>
+			<source uniqueElementName="source">LOM-ESv1.0</source>
+			<value uniqueElementName="value">learner</value>
+		</intendedEndUserRole>
+		<context>
+			<source uniqueElementName="source">LOM-ESv1.0</source>
+			<value uniqueElementName="value">presencial</value>
+		</context>
+		<context>
+			<source uniqueElementName="source">LOM-ESv1.0</source>
+			<value uniqueElementName="value">classroom</value>
+		</context>
+		<language>en</language>
+	</educational>
+	<rights uniqueElementName="rights">
+		<copyrightAndOtherRestrictions uniqueElementName="copyrightAndOtherRestrictions">
+			<source uniqueElementName="source">LOM-ESv1.0</source>
+			<value uniqueElementName="value">public domain</value>
+		</copyrightAndOtherRestrictions>
+		<access uniqueElementName="access">
+			<accessType uniqueElementName="accessType">
+				<source uniqueElementName="source">LOM-ESv1.0</source>
+				<value uniqueElementName="value">universal</value>
+			</accessType>
+			<description>
+				<string language="lt">Default</string>
+			</description>
+		</access>
+	</rights>
+</lom>

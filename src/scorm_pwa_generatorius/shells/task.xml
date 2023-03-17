@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="task_kvskaiciavimas">
+    <title>Kėlimas kvadratu</title>
+    <description><![CDATA[<p>Para&scaron;ykite programą, kuri pakeltų skaičių kvadratu.</p>]]>
+    </description>
+    <example><![CDATA[<p>Įvestis: <strong>5</strong><br>I&scaron;vestis: <strong>25</strong></p>]]>
+    </example>
+    <skeleton><![CDATA[# Toliau rašykite kodą...]]>
+    </skeleton>
+</task>
