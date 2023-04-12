@@ -146,6 +146,8 @@ function setupPythonIDE (codeId,outputId,canvasId) {
                Sk.tg.turtleList = [];
            }
         }
+
+        // inputfun: Sk.builtin.raw_input, 
         Sk.configure({output:outf, read:builtinRead}); 
         (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = canvasId;
 
@@ -213,8 +215,6 @@ function setupPythonIDE (codeId,outputId,canvasId) {
     function stdoutOutput(text) {
         return new Promise((resolve, reject) => {
             testresult = testresult + text;
-            //var mypre = document.getElementById(outputId); 
-            //mypre.innerHTML += testresult; 
             resolve(text);
         });
     }
@@ -243,6 +243,8 @@ function setupPythonIDE (codeId,outputId,canvasId) {
                Sk.tg.turtleList = [];
            }
         }
+
+        oldInputFun = Sk.inputfun;
         Sk.configure({inputfun: stdinInput, inputfunTakesPrompt: true, output:stdoutOutput, read:builtinRead}); 
         (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = canvasId;
 
@@ -298,6 +300,8 @@ function setupPythonIDE (codeId,outputId,canvasId) {
            Sk.uncaughtException 
         );
 
+        // restore input prompt for running program normaly
+        Sk.configure({inputfun: oldInputFun});
         // Restore the old setInterval function
         restoreAsync();
     } 

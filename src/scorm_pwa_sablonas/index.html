@@ -14,6 +14,10 @@
     <link rel="stylesheet" type="text/css" href="style/codemirror.css">
     <link rel="stylesheet" type="text/css" href="style/skulptide.css"> 
     <link rel="stylesheet" type="text/css" href="style/dracula.css">
+    <!--
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    --> 
+
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/codemirror.js"></script>
     <script src="javascript/matchbrackets.js"></script>
@@ -39,16 +43,16 @@
             <div id="example_el">
             </div>
             <div id="menu">
-                <label class="button" onclick="newProgram()">Nauja programa</label> 
-                <label class="button" onclick="runProgram()">Vykdyti</label> 
-                <label class="button" onclick="evalProgram()">Vertinti</label> 
-                <label class="button" onclick="stopit()">Stabdyti</label> 
-                <label class="button" onclick="clearit()">Išvalyti išvestį</label> 
-                <label class="button" for="loadfile">Įkelti</label>
-                    <input type="file" id="loadfile" name="files[]" style="visibility:hidden;display:none;" onchange="loadit(this)"></input>
-                <label class="button" onclick="saveit()">Atsisiųsti</label>
-                <input id="savefilename" type="text" value="programa.py"/>
-                <br/><br/>
+                <button class="btn blue" type="button" onclick="newProgram()"><span>Nauja programa</span></button> 
+                <button class="btn" type="button" onclick="runProgram()"><span>Vykdyti</span></button> 
+                <button class="btn orange" type="button" onclick="evalProgram()"><span>Vertinti</span></button> 
+                <button class="btn blue" type="button" onclick="stopit()"><span>Stabdyti</span></button> 
+                <button class="btn blue" type="button" onclick="clearit()"><span>Išvalyti išvestį</span></button> 
+                <button class="btn blue" type="button" onclick="loadFromFile()"><span>Įkelti</span></button>
+                <input type="file" id="loadfile" name="files[]" style="visibility:hidden;display:none;" onchange="loadit(this)"></input>
+                <button class="btn blue" type="button" onclick="saveit()"><span>Atsisiųsti</span></button>
+                <input id="savefilename" type="hidden" value="programa.py"/>
+                <br/>
             </div>
         </div>
         
@@ -63,14 +67,25 @@
     </div>
     
     <div id="outputpanel">
-        <h4 class="IDE">Išvestis</h4>
+        <h4>Išvestis</h4>
         <pre id="output"></pre> 
-        <h4 class="IDE">Testavimas</h4>
-        <pre id="tests"></pre> 
+        <h4>Testavimas</h4>
+        <table id="tests" class="table table-dark text-white mb-0">
+            <thead>
+                <tr class="">
+                    <th class="table-nr">#</th>
+                    <th class="table-input">Testo duomenys</th>
+                    <th class="table-result">Rezultatas</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table> 
     </div>
 
     <div id="showurl" style="display:none;">
-        <label class="button" onclick="showUrl()">Show URL for this sketch</label><br/>
+        <label class="btn blue" type="button" onclick="showUrl()">Show URL for this sketch</label><br/>
         <a id="myurl" href="" title=""></a>
     </div>
 
@@ -94,6 +109,10 @@
             }
         }
         return false;
+    }
+
+    function loadFromFile() {
+        $('input[type="file"]').click();        
     }
 
     // Saves the current state to the browser's store
@@ -155,13 +174,19 @@
         setScore();
     }
 
+    function clearTestTable() {
+        $("#tbody").empty();
+    }
+
     function showTestResult(nr, is_correct) {
-        preresult = $("#tests").html();
-        if(is_correct) {
-           $("#tests").html(preresult + (nr+1) + ". teisingai.<br>"); 
+        if (is_correct) {
+            res_type = "correct-result";
+            res_text = "Teisingai";
         } else {
-           $("#tests").html(preresult + (nr+1) + ". neteisingai.<br>");             
+            res_type = "incorrect-result";
+            res_text = "Neteisingai";
         }
+        $('#tbody').append('<tr id="' + (nr + 1) + '"><td>' + (nr + 1) + '</td><td>' + testinput + '</td><td class="' + res_type + '">' + res_text + '</td></tr>');
     }
 
     function registerTestResult() {
@@ -190,6 +215,7 @@
     function evalProgram() {
         storeProgram();
         startScorm();
+        clearTestTable();
         loadTests();
     }
 

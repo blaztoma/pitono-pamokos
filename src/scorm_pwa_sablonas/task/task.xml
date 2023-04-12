@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<task id="task_kvskaiciavimas">
+<task id="{{TASK_ID}}">
     <title>{{TASK_TITLE}}</title>
+    <short>{{SHORT_TITLE}}</short>
     <description><![CDATA[{{TASK_DESCRIPTION}}]]>
     </description>
     <example><![CDATA[{{TASK_EXAMPLE}}]]>
     </example>
     <skeleton><![CDATA[{{TASK_SKELETON}}]]>
     </skeleton>
+    <author>{{TASK_AUTHOR}}</author>
+    <score>{{PASSING_SCORE}}</score>
 </task>
