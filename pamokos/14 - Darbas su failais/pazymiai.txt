@@ -1,0 +1,4 @@
+Jonas 10 8 9
+Petras 9 9 10 10
+Paulina 9 8
+Inga 10 7 10
