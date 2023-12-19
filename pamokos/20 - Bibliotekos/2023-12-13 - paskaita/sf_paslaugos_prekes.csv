@@ -1,0 +1,28 @@
+idsf_paslaugos_prekes,pavadinimas,matavimo_vnt,vienetu,vnt_kaina,saskaitos_fakturos_id,nuolaida
+1,"Dizaino piešimas",val.,120,40,1,0
+2,"Dizaino programavimas",val.,120,40,1,0
+3,Programavimas,val.,160,40,2,0
+4,Testavimas,val.,16,30,2,0
+5,Programavimas,val.,160,40,3,0
+6,Testavimas,val.,20,30,3,0
+7,Programavimas,val.,160,40,4,0
+8,Testavimas,val.,20,30,4,0
+9,Programavimas,val.,160,40,5,0
+10,Testavimas,val.,40,30,5,0
+11,Programavimas,val.,100,40,6,0
+12,Testavimas,val.,40,30,6,0
+13,"Dokumentacijos rengimas",val.,50,30,6,0
+14,"Projekto parengimas darbui",val.,30,30,6,0
+15,"Dizaino piešimas",val.,80,40,7,0
+16,"Dizaino programavimas",val.,120,40,7,0
+17,Testavimas,val.,20,30,8,0
+18,Programavimas,val.,100,40,9,0
+19,Testavimas,val.,20,30,9,0
+20,"Projekto talpinimas",val.,20,30,9,0
+21,Avansas,vnt.,1,1000,10,0
+22,"Dizaino piešimas",val.,80,40,11,0
+23,"Dizaino programavimas",val.,80,40,11,0
+24,Testavimas,val.,20,30,11,0
+25,Programavimas,val.,80,40,12,0
+26,Testavimas,val.,10,30,12,0
+27,"Projekto talpinimas",val.,10,30,12,0
