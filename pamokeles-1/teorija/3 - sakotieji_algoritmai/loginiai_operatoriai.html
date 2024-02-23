@@ -1,0 +1,246 @@
+<h2>Loginiai operatoriai</h2>
+<h4>Apie loginius operatorius</h4>
+<p>Loginiai operatoriai dažniausiai naudojami norint patikrinti kelias sąlygas vienu metu, tuo būdu sumažinant kodo kiekį ir jį supaprastinant. Pavyzdžiui:</p>
+<ul>
+<li>Ar naudotojas prisijungęs&nbsp;<strong>IR</strong>&nbsp;turi atitinkamą rolę?</li>
+<li>Ar failas&nbsp;<strong>ARBA</strong>&nbsp;tam tikras katalogas egzistuoja?</li>
+<li>Ar studentas turi pinigų bilietui&nbsp;<strong>ARBA</strong>&nbsp;turi galiojantį pažymėjimą?</li>
+<li>Ar skaičius patenka į intervalą (ar skaičius &gt;= pradžia&nbsp;<strong>IR</strong>&nbsp;&lt;= pabaiga)?</li>
+<li>Ar produktas&nbsp;<strong>NE</strong>&nbsp;mokamas?</li>
+</ul>
+<h4>Loginių operatorių aprašymas</h4>
+<p>Jei aprašymas ne visai aiškus - pradėkite nuo pavyzdžių ir vėliau sugrįškite čia.</p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;">&nbsp; &nbsp; Operatorius&nbsp; &nbsp;&nbsp;</th>
+<th style="text-align: center; padding: 5px;">Aprašymas</th>
+<th style="text-align: center; padding: 5px;">Pavyzdys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>and</code></td>
+<td style="text-align: center; padding: 5px;"><code>True</code>, jeigu abi sąlygos yra&nbsp;<code>True</code></td>
+<td style="text-align: center; padding: 5px;"><code>&nbsp; &nbsp;x &lt; 5 and x &lt; 10&nbsp;&nbsp;</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>or</code></td>
+<td style="text-align: center; padding: 5px;"><code>&nbsp; &nbsp;True</code>, jeigu bent viena iš sąlygų yra&nbsp;<code>True&nbsp; &nbsp;</code></td>
+<td style="text-align: center; padding: 5px;"><code>x &lt; 5 or x &lt; 4</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>not</code></td>
+<td style="text-align: center; padding: 5px;">atvirkštinė reikšmė</td>
+<td style="text-align: center; padding: 5px;"><code>not 1 &lt; 2</code></td>
+</tr>
+</tbody>
+</table>
+<h4><code>and</code>&nbsp;(ir) operatorius</h4>
+<p><code>and</code>&nbsp;Pitono loginis operatorius atlieka dviejų loginių reikšmių, kintamųjų arba išraiškų loginį palyginimą.</p>
+<p>Jei abiejų operatoriaus pusių reikšmės yra&nbsp;<code>True</code>, operatorius&nbsp;<code>and</code>&nbsp;grąžina&nbsp;<code>True</code>. Jei kurios nors iš pusių (arba abiejų pusių) reikšmė yra&nbsp;<code>False</code>, operatorius&nbsp;<code>and</code>&nbsp;grąžina&nbsp;<code>False</code>.</p>
+<p>Jei naudojama ne loginio tipo reikšmė (arba kintamasis, kuriame saugoma reikšmė), Pitone ji visada bus vertinama kaip&nbsp;<code>True</code>.</p>
+<p><strong>Teisingumo lentelė</strong></p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;">&nbsp;<code>X&nbsp;</code></th>
+<th style="text-align: center; padding: 5px;"><code>&nbsp;Y&nbsp;</code></th>
+<th style="text-align: center; padding: 5px;"><code>&nbsp; X and Y&nbsp;&nbsp;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">0</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">0</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">0</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">1</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><strong>Operacija ir rezultatas</strong></p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;">Operacija</th>
+<th style="text-align: center; padding: 5px;">&nbsp; Rezultatas&nbsp;&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>&nbsp; False</code>&nbsp;and&nbsp;<code>False&nbsp;&nbsp;</code></td>
+<td style="text-align: center; padding: 5px;"><code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>False</code>&nbsp;and&nbsp;<code>True</code></td>
+<td style="text-align: center; padding: 5px;"><code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>True</code>&nbsp;and&nbsp;<code>False</code></td>
+<td style="text-align: center; padding: 5px;"><code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>True</code>&nbsp;and&nbsp;<code>True</code></td>
+<td style="text-align: center; padding: 5px;"><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Keli pavyzdžiai</strong></p>
+<pre>True and True # Bus True
+True and False    # Bus False
+False and False   # Bus False
+1 == 1 and 1 &lt; 2  # Bus True
+1 &lt; 2 and 3 &lt; 1   # Bus False
+"Taip" and 100    # Bus True
+</pre>
+<h4><code>or</code>&nbsp;(arba) operatorius</h4>
+<p><code>or</code>&nbsp;Pitono loginis operatorius sudeda dvi logines išraiškas ir įvertina&nbsp;<code>True</code>, jei bent viena iš išraiškų įvertinama&nbsp;<code>True</code>. Priešingu atveju, jei abi išraiškos yra&nbsp;<code>False</code>, visa išraiška įvertinama kaip&nbsp;<code>False</code>.</p>
+<p><strong>Teisingumo lentelė</strong></p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;"><code>&nbsp;X&nbsp;</code></th>
+<th style="text-align: center; padding: 5px;"><code>&nbsp;Y&nbsp;</code></th>
+<th style="text-align: center; padding: 5px;"><code>&nbsp; X or Y&nbsp;&nbsp;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">0</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">1</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">1</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">1</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><strong>Operacija ir rezultatas</strong></p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;">Operacija</th>
+<th style="text-align: center; padding: 5px;">&nbsp; Rezultatas&nbsp;&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>&nbsp; False</code>&nbsp;or&nbsp;<code>False&nbsp;&nbsp;</code></td>
+<td style="text-align: center; padding: 5px;"><code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>False</code>&nbsp;or&nbsp;<code>True</code></td>
+<td style="text-align: center; padding: 5px;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>True</code>&nbsp;or&nbsp;<code>False</code></td>
+<td style="text-align: center; padding: 5px;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>True</code>&nbsp;or&nbsp;<code>True</code></td>
+<td style="text-align: center; padding: 5px;"><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><strong>Keli pavyzdžiai</strong></p>
+<pre>True or True # Bus True
+True or False     # Bus True
+False or False    # Bus False
+1 &lt; 2 or 3 &lt; 1    # Bus True
+3 &lt; 1 or 1 &gt; 6    # Bus False
+1 == 1 or 1 &lt; 2   # Bus True
+</pre>
+<h4><code>not</code>&nbsp;(ne) operatorius</h4>
+<p><code>ne</code>&nbsp;Pitono loginis operatorius naudojamas loginėje išraiškoje tam, kad būtų gauta išraiškos atvirkštinė reikšmė. Jei pradinė išraiška buvo&nbsp;<code>True</code>, panaudojus operatorių&nbsp;<code>not</code>&nbsp;išraiška taptų&nbsp;<code>False</code>, ir atvirkščiai.</p>
+<p><strong>Teisingumo lentelė</strong></p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;"><code>&nbsp;X&nbsp;</code></th>
+<th style="text-align: center; padding: 5px;"><code>&nbsp; not X&nbsp;&nbsp;</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;">0</td>
+<td style="text-align: center; padding: 5px;">1</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">1</td>
+<td style="text-align: center; padding: 5px;">0</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><strong>Operacija ir rezultatas</strong></p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;">&nbsp; Operacija&nbsp;&nbsp;</th>
+<th style="text-align: center; padding: 5px;">&nbsp; Rezultatas&nbsp;&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;">not&nbsp;<code>False</code></td>
+<td style="text-align: center; padding: 5px;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;">not&nbsp;<code>True</code></td>
+<td style="text-align: center; padding: 5px;"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><strong>Keli pavyzdžiai</strong></p>
+<pre>not True    # Bus False
+not False    # Bus True
+1 &gt; 2        # Bus False
+not 1 &gt; 2    # Bus True
+1 == 1       # Bus True
+not 1 == 1   # Bus False
+</pre>
+<h4>Pasitikrinkite</h4>
+<p>Kaip manote, kaip Pitonas įvertins šias išraiškas?</p>
+<p><span style="font-size: 0.9375rem;">Sugalvokite atsakymus ir norėdami pasitikrinti papildykite programą rezultatų spausdinimu.</span></p>
+<iframe id="ifr_5906" class="pyframe" title="Loginiai 1" src="https://arzinai.lt/scormv2/public/656506b5247cf" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Pavyzdžiai</h4>
+<p>Patikrinam ar skaičius patenka į intervalą:</p>
+<iframe id="ifr_8358" class="pyframe" title="Loginiai 2" src="https://arzinai.lt/scormv2/public/6565078e8bc4f" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Patikrinam ar skaičius dalinasi iš šių skaičių: 2, 3 ir 10. <iframe id="ifr_5949" class="pyframe" title="Loginiai 3" src="https://arzinai.lt/scormv2/public/656507f445a4c" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+</p>
+<p>Nustatome ar skaičius lyginis/nelyginis:</p>
+<iframe id="ifr_8707" class="pyframe" title="Loginiai 4" src="https://arzinai.lt/scormv2/public/6565089dad9e7" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>

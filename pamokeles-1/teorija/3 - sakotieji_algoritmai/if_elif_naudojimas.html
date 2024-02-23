@@ -1,0 +1,25 @@
+<h2>Kiti atvejai - if ... elif naudojimas</h2>
+<p><code>If</code> sakiniai dažnai įtraukia bent du atvejus, o kartais ir daug daugiau. Tokiu atveju naudojama <code>elif</code> arba <code>else if</code> struktūra. Lietuviškai šią sakinio dalį išverstume "<i>... kitu atveju, jeigu ...</i>". Naudojimas jums paaiškės pamačius pavyzdžius, o kol kas panagrinėkime šios struktūros savybes:</p>
+<ul>
+  <li><code>elif / else</code> if leidžia tikrinti kelias sąlygas (vieną po kitos).</li>
+  <li>Galima naudoti tiek <code>elif</code> blokų kiek tik reikia.</li>
+  <li>Kiekviena <code>elif</code> dalis atsakinga už naujos sąlygos apdorojimą.</li>
+  <li>Jei įvertinant skirtingas sąlygas yra randama teisinga, tuomet bloke esantis kodas yra įvykdomas ir tolesnės sąlygos nebetikrinamos.</li>
+ </ul>
+<p>Sintaksė</p>
+<pre>if salyga_1:
+    # šio bloko kodas vykdomas jeigu salyga_1 reikšmė yra True
+elif salyga_2:
+    # šio bloko kodas vykdomas jeigu salyga_2 reikšmė yra True
+elif salyga_3:
+    # šio bloko kodas vykdomas jeigu salyga_3 reikšmė yra True
+</pre>
+<h3>Pavyzdžiai</h3>
+<p>Dviejų skaičių palyginimas</p>
+<iframe id="ifr_1825" class="pyframe" src="https://arzinai.lt/scormv2/public/6564ef503a3e3" width="100%" height="30" frameborder="0" allow="fullscreen" title="Elif 1"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Meniu punkto pasirinkimas</p>
+<iframe id="ifr_2303" class="pyframe" src="https://arzinai.lt/scormv2/public/6564efbe7ea3b" width="100%" height="30" frameborder="0" allow="fullscreen" title="Elif 2"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Intervalo radimas</p>
+<iframe id="ifr_8728" class="pyframe" src="https://arzinai.lt/scormv2/public/6564f016f0b8a" width="100%" height="30" frameborder="0" allow="fullscreen" title="Elif 2"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Tekstų palyginimas</p>
+<iframe id="ifr_8079" class="pyframe" src="https://arzinai.lt/scormv2/public/6564f0677e136" width="100%" height="30" frameborder="0" allow="fullscreen" title="Elif 4"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>

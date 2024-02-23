@@ -1,0 +1,19 @@
+<h2>Funkcijos parametrai ir argumentai</h2>
+<p>Prisiminkime mūsų skanduotę:</p>
+<iframe id="ifr_5545" class="pyframe" src="https://arzinai.lt/scormv2/public/659890509be44" width="100%" height="100" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Matote - skliausteliuose yra šūkio parametras (<code>sukis</code>). Ir šią funkciją iškviečiam parašydami funkcijos vardą ir nurodydami konkrečią reikšmę, tai yra - <em>argumentą</em>. Ką mes tuo pasiekėme? Ogi - mums nereikėjo rašyti dviejų funkcijų skirtingoms skanduotėms.</p>
+<p>Apibendrinkime. Funkcijos aprašymas:</p>
+<pre>def funkcijos_pavadinimas(parametras1, parametras2, ...):
+    # funkcijos kodas
+</pre>
+<p>Funkcijos iškvietimas:</p>
+<pre>funkcijos_pavadinimas(argumentas1, argumentas2, ...)
+</pre>
+<h4>Pavyzdžiai</h4>
+<p>Lig šiol naudojome vieną parametrą. Bet jų gali būti ir daugiau - tiek kiek reikia. Jei panorėsime parašyti funkciją sumos skaičiavimui - mums prireiks dviejų parametrų:</p>
+<iframe id="ifr_6187" class="pyframe" src="https://arzinai.lt/scormv2/public/6598944ca751e" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>O dabar parašykime funkciją informacijos apie asmenį išvedimui. Jai jau reikės 3 parametrų!</p>
+<iframe id="ifr_415" class="pyframe" src="https://arzinai.lt/scormv2/public/659895e7d0310" width="100%" height="100" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Tik neįsismaginkite. Kai parametrų tampa daug - jūs jau kažką ne taip darote...</p>

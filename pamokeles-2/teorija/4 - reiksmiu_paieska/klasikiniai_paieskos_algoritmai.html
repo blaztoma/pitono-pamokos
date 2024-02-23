@@ -1,0 +1,22 @@
+<h2>Klasikiniai paieškos algoritmai</h2>
+<h3>Apie paieškos algoritmus</h3>
+<p>Jei jau turime kažkokį sąrašą, tai beveik neišvengiamai mums reikės jame rasti konkrečią reikšmę, didžiausią ar mažiausią elementą. Galimai reikės atrinkti elementus pagal tam tikras savybes ir atlikti daugybę kitų veiksmų. Šios operacijos tokios dažnos, kad modernios programavimo kalbos turi pačioje kalboje realizuotus algoritmus. Prieš susipažindami su jais, pradžioje panagrinėkime kaip patiems galima realizuoti 3 pagrindines sąrašų operacijas:</p>
+<ol>
+  <li>Elemento reikšmės paieška sąraše</li>
+  <li>Didžiausio elemento paiešką</li>
+  <li>Mažiausio elemento paieška</li>
+</ol>
+<h4>Elemento paieška sąraše</h4>
+<p>Sakykime, turime mokinių sąrašą ir mums reikia surasti konkretų mokinį. Tuo tikslu organizuojam ciklą ir tikrinam kiekvieną sąrašo elementą. Kai elementas surandamas - ciklas gali būti nutraukiamas arba ieškoma toliau. Toliau pateiktas pavyzdys, kai paieška nutraukiama radus pirmą elementą.</p>
+<iframe id="ifr_7370" class="pyframe" src="https://arzinai.lt/scormv2/public/659aeb6282bf2" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<h4>Didžiausio elemento paieška</h4>
+<p>Rasti ekstremumus (didžiausią arba mažiausią elementą) - irgi gana dažnau duomenų apdorojimo operacija. Pavyzdžiui, reikia rasti karščiausią arba šalčiausią dieną, pigiausią arba brangiausią prekę ir t.t. Šį kartą toliau dirbsime su mokinių sąrašu ir pamėginsime surasti aukščiausią mokinį.</p>
+<iframe id="ifr_3280" class="pyframe" src="https://arzinai.lt/scormv2/public/659aed3c3adc3" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Šio algoritmo esmė yra paprasta. Pačioje pradžioje reikia priimti, kad didžiausia reikšmė yra ta, už kurią mažesnės negali būti :) Arba tiesiog paimti pirmą sąrašo elementą. Čia pasirinktas pirmas variantas. Už -1 centimetrą sunku būti mažesniam :) Tuomet peržiūrime kiekvieną sąrašo elementą ir jei jis didesnis - didžiausia reikšme pasirenkam peržiūrimą elementą. Peržiūrėjus visą ciklą - tai ir bus pati didžiausia sąrašo reikšmė.</p>
+
+<h4>Mažiausio elemento paieška</h4>
+<p>Toliau dirbsime su mokinių sąrašu ir pamėginsime surasti aukščiausią mokinį.</p>
+<iframe id="ifr_1172" class="pyframe" src="https://arzinai.lt/scormv2/public/659af02d1040a" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Šio algoritmo esmė yra praktiškai ta pati. Skiriasi tai, kad pradžioje reikia priimti, kad mažiausia reikšmė yra ta, už kurią didesnės negali būti (<code>inf</code>) :) Arba tiesiog paimti pirmą sąrašo elementą. Įdomumo dėlei pasirinkome antrą variantą. Priimam, kad pati mažiausia yra Justė. Tuomet peržiūrime kiekvieną sąrašo elementą ir jei jis mažesnis - mažiausia reikšme pasirenkam peržiūrimą elementą. Peržiūrėjus visą ciklą - tai ir bus pati mažiausia sąrašo reikšmė.</p>
+<p>Pabaigai galime pasakyti, kad šių paieškos algoritmų supratimas yra svarbus mokantis pirmąsias programavimo kalbas. Kai juos perprasite - praktikoje naudokite kitas paieškos priemones, kurias teikia pačios kalbos ar jų bibliotekos. Taigi - susipažinkime ir su jomis.</p>

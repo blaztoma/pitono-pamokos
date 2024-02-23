@@ -1,0 +1,94 @@
+<h2>Programos tėkmė ir if sąlygos sakiniai</h2>
+<p>Kompiuteris ir jo programos būtų neprotingi ir mažai panaudojami dalykai, jei negalėtų priimti sprendimų. Kiek jie protingi - irgi diskusijų vertas klausimas, tačiau chatGPT, šachmatus žaidžiančios ir kitos programos parodė, kad kompiuteriai gali priimti sprendimus. Ir netgi - visai neblogus. Čia mes panagrinėsime kaip kompiuteris gali priimti pačius paprasčiausius sprendimus, nulemiančius programos vykdymo tėkmę. Tai yra - kokios operacijos bus vykdomos atsižvelgiant į situaciją.</p>
+<p>Norėdami programos veikimą pakreipti tam tikru keliu, turime priimti sprendimą atsižvelgiant į įvairias, programai aktualias, sąlygas. Tai yra, turime palyginti tai, kas aktualu programai, pavyzdžiui:</p>
+<iframe id="ifr_7504" class="pyframe" title="If 1" src="https://arzinai.lt/scormv2/public/6564da0076dc6" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Matome, kad mes palyginome kintamąjį <code>slaptažodis</code> su tekstu <code>adminas</code>. Ar atkreipėte dėmesį, kad palyginimui naudojamos net dvi lygybės (<code>==</code>). Taip yra todėl, kad Pitone viena lygybė rezervuota priskyrimo sakiniui. Be abejonės - tokio palyginimo neužtenka, yra keletas kitų palyginimo operatorių, kartais dar vadinamų <i>komparatoriais</i>. Jie pateikti lentelėje.</p>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="text-align: center; padding: 5px;">Operatorius</th>
+<th style="text-align: center; padding: 5px;">Apibūdinimas</th>
+<th style="text-align: center; padding: 5px;">Pavyzdys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>==</code></td>
+<td style="text-align: center; padding: 5px;">ar lygu</td>
+<td style="text-align: center; padding: 5px;"><code>x == y</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>!=</code></td>
+<td style="text-align: center; padding: 5px;">ar nelygu</td>
+<td style="text-align: center; padding: 5px;"><code>x != y</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>&gt;</code></td>
+<td style="text-align: center; padding: 5px;">ar daugiau</td>
+<td style="text-align: center; padding: 5px;"><code>x &gt; y</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>&lt;</code></td>
+<td style="text-align: center; padding: 5px;">ar mažiau</td>
+<td style="text-align: center; padding: 5px;"><code>x &lt; y</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>&gt;=</code></td>
+<td style="text-align: center; padding: 5px;">&nbsp; ar daugiau arba lygu&nbsp;&nbsp;</td>
+<td style="text-align: center; padding: 5px;"><code>x &gt;= y</code></td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 5px;"><code>&lt;=</code></td>
+<td style="text-align: center; padding: 5px;">ar mažiau arba lygu</td>
+<td style="text-align: center; padding: 5px;"><code>x &lt;= y</code></td>
+</tr>
+</tbody>
+</table>
+<p>Kaip matote, įdomesnis yra tik nelygybės ženklas, kuris prasideda šauktuku. Taip jau yra, kad Pitone ir įvairiose kitose kalbose šis ženklas reiškia - NE.</p>
+<h3>If sakinio struktūra</h3>
+<p>If sąlygos sakinys gali susidėti iš kelių dalių:</p>
+<ul>
+<li><code>if</code> - būtinoji dalis, po jos rašomi veiksmai, kurie vydomi patenkinus sąlygą.</li>
+<li><code>elif</code> / <code>else if</code> - jeigu reikia tikrinti daugiau sąlygų, galima rašyti tiek else if dalių kiek tik reikia.</li>
+<li><code>else</code> - rašosi pačiame gale, vieną kartą, jei reikia apimti visas sąlygas, kurios nepatenka į kitas dalis.</li>
+</ul>
+<p>Paprasčiausia if sakinio forma yra tokia:</p>
+<pre>if sąlyga:
+  veiksmai...
+</pre>
+<p>Tai yra, rašomas raktažodis <code>if</code>, nurodoma sąlyga ir gale parašomas dvitaškis. Po to nurodomi veiksmai, kurie atitraukiami nuo krašto.</p>
+<p>Sąlygos veiksmai bus vykdomi tik tuo atveju jei sąlygoje gausime teisingą (<code>True</code> tipo) atsakymą.</p>
+<h3>Keli pavyzdžiai</h3>
+<p>Pasinagrinėkite toliau esančius pavydžius ir daug kas paaiškės.</p>
+<p>Paprasčiausias dviejų skaičių palyginimas.</p>
+<iframe id="ifr_9645" class="pyframe" title="If 2" src="https://arzinai.lt/scormv2/public/6564dd67e6b55" width="100%" height="50" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Kintamojo panaudojimas sąlygoje.</p>
+<iframe id="ifr_5955" class="pyframe" title="If 3" src="https://arzinai.lt/scormv2/public/6564ddee6279d" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Teksto palyginimas</p>
+<iframe id="ifr_987" class="pyframe" title="If 13" src="https://arzinai.lt/scormv2/public/6564e4df47d2b" width="100%" height="10" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Naudotojo įvesties tikrinimas</p>
+<iframe id="ifr_9928" class="pyframe" title="If 5" src="https://arzinai.lt/scormv2/public/6564df41984b8" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Ar skaičius dalijasi/nesidalija?</p>
+<iframe id="ifr_491" class="pyframe" title="If 6" src="https://arzinai.lt/scormv2/public/6564e00fb20f9" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Tai nustatome patikrinę ar liekna yra 0.</p>
+<h3>Loginės reikšmės</h3>
+<p>If sakinio sąlyga gali būti labai sudėtinga, tačiau kai sąlyga įvertinama, gaunamas vienas įvertis, kuris pasako ar sąlyga buvo teisinga ar neteisinga. Tas įvertis yra loginė reikšmė, kuri gali būti <code>True</code> arba <code>False</code> (tiesa/netiesa). Jei pamėginsime funkcijai <code>print</code> nurodyti sąlygą, mums Pitonas ir atspausdins rezultatą.</p>
+<iframe id="ifr_6796" class="pyframe" title="If 7" src="https://arzinai.lt/scormv2/public/6564e1ac3cb81" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Pažiūrėkime atidžiau, ką Pitonui reiškia <code>True</code> ir <code>False</code> reikšmės. Pamėginkite paaiškinti atspausdintus rezultatus.</p>
+<iframe id="ifr_9699" class="pyframe" title="If 8" src="https://arzinai.lt/scormv2/public/6564e30a8d21d" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Jei loginė reikšmė apskaičiuojama anksčiau, ją galime palyginti arba palikti Pitonui spręsti pagal nutylėjimą. Dažniau naudojamas antrasis variantas.</p>
+<iframe id="ifr_3382" class="pyframe" title="If 9" src="https://arzinai.lt/scormv2/public/6564e3502b4d8" width="100%" height="10" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h3>if'ai... if'uose</h3>
+<p>Dažnai pasitaiko toks atvejis, kai vienos sąlygos nepakanka. Tuomet galime <code>if</code> naudoti ir kito <code>if</code> bloke.</p>
+<iframe id="ifr_3555" class="pyframe" title="If 10" src="https://arzinai.lt/scormv2/public/6564e3ca8a8ba" width="100%" height="30" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Tiesa, šį sakinį galima užrašyti trumpiau naudojant loginius operatorius. Juos mes dar nagrinėsime. Galima galvoti apie <code>if</code> bloko panaudojimą kitame <code>if</code> tuomet, kai įvairios sąlygos viename <code>if</code> sakinyje tampa sunkiai skaitomos ir suvokiamos.</p>

@@ -1,0 +1,29 @@
+<h2>Apie funkcijas</h2>
+<p>Funkcijos skirtos atlikti tam tikras, konkrečias užduotis. Tai veiksmų rinkinys, skirtas vienos konkrečios užduoties atlikimui. Pavyzdžiui, nuskaityti failą, suskaičiuoti sumą, išvesti ataskaitą ir pan.</p>
+<blockquote>Beje, programuotojai sako, kad jeigu funkcijos atlieka daugiau nei vieną užduotį - tai yra negerai, ją reikia išskaidyti.</blockquote>
+<p>Python turi daug iš anksto paruoštų funkcijų. Su kai kuriomis jau susipažinote, pvz, <code>range()</code>, <code>print()</code>, <code>randint()</code>, ir kt. Dabar galėsite susikurti ir savo funkcijas.</p>
+<p>Paprastai funkcijos kuriamos tada kai nesinori to paties algoritmo rašyti kelis kartus. Tada algoritmą funkcijoje užrašome vieną kartą, ir tą funkciją galime kviesti tiek kartų kiek reikia. Kitas svarbus dalykas, dėl ko kuriamos funkcijos - tai programos struktūrizavimas. Programą būtų labai sunku skaityti, jei tai būtų nesuskaidytas kodas.</p>
+<p>Funkcija pati savavališkai nevykdo savyje esančio kodo, todėl norint, kad ji atliktų kokį nors darbą - reikės ją iškviesti.</p>
+<p>Jeigu funkcijai reikia kokių nors duomenų, jai tai galima perduoti kaip parametrus / argumentus.</p>
+<p>Funkcija gali grąžinti kokio nors tipo atsakymą arba keletą atsakymų. Šiuos atsakymus jau galite naudoti funkcijos išorėje.</p>
+
+<h4>Funkcijos sintaksė</h4>
+<p>Funkcijos apibrėžimui naudojamas raktažodis <code>def</code>. Po jo seka funkcijos pavadinimas ir skliausteliuose esantys argumentai. Po skliaustelių dvitaškiu atidaromas blokas, kuriame rašomas funkcijos programinis kodas.</p>
+<pre>def funkcijos_pavadinimas(parametras1, parametras2, ...):
+    # funkcijos kodas
+    return grazinamas_atsakymas
+</pre>
+<p>Funkcija iškviečiama užrašius funkcijos pavadinimą (ir pateikus jai reikalingus argumentus).</p>
+<blockquote>Beje, funkcija turi būti aprašyta prieš ją iškviečiant.</blockquote>
+
+<h4>Pavyzdžiai</h4>
+<p>Paskanduokime aprašydami funkciją ir ją iškviesdami!</p>
+<iframe id="ifr_611" class="pyframe" src="https://arzinai.lt/scormv2/public/65988ec261350" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Na gerai - tai ne visai skanduotė... Padarykime tai bent kelis kartus:</p>
+<iframe id="ifr_733" class="pyframe" src="https://arzinai.lt/scormv2/public/65988f7f7d0d2" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>O jeigu... mes užsimanysime kartu su komandos pavadinimu sušukti "Lietuva!"!? Negi rašysime kitą funkciją? Tikrai ne! Darykime taip:</p>
+<iframe id="ifr_5545" class="pyframe" src="https://arzinai.lt/scormv2/public/659890509be44" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Dar ne viskas aišku kas čia vyksta? Nieko tokio - mes dar tik pradedame susipažinti su funkcijomis.</p>

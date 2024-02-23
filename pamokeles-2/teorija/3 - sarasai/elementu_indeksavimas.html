@@ -1,0 +1,70 @@
+<h2>Sąrašo elementų indeksavimas</h2>
+<p>Pitonas susinumeruoja mūsų sąrašo elementus ir mes tuos elementus galime pasiekti naudodami jų numerius. Pavyzdžiui, mūsų pradinį studentų sąrašą Pitonas susinumeruos taip:</p>
+<table style="text-align: center; ">
+<thead>
+<tr>
+<th scope="col">&nbsp; &nbsp;Elementas&nbsp; &nbsp;</th>
+<th scope="col">&nbsp; &nbsp;Indeksas&nbsp; &nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tomas</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Rimas</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Rima</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Sigita</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Įdomus dalykas! Kaip matote, Pitonas numeruoja žmones ir kitus elementus nuo <code>0</code>. Taip jau yra - daugelis kalbų kažkodėl taip daro...</p>
+<p>Taigi, pamėginkime atspausdinti antrą studentų sąrašo elementą:</p>
+<iframe id="ifr_9358" class="pyframe" src="https://arzinai.lt/scormv2/public/6599c3b012a8b" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Ar pastebėjote, kad norėdami atspausdinti antrą elementą turėjome nurodyti pirmą (<code>1</code>) indeksą. Taip, taip - čia dėl to, kad elementai numeruojami (kitaip sakant - indeksuojami) nuo <code>0</code>.</p>
+<p>Dėl šito ar kito dalyko kartais galime ir apsirinkti. Pasižiūrėkime, kaip reaguos mūsų Pitonas:</p>
+<iframe id="ifr_5560" class="pyframe" src="https://arzinai.lt/scormv2/public/6599c42b8005a" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Matote, klaidos tipas yra <code>IndexError</code>, o klaidos apibūdinimas: <code>list out of range</code> arba "nepatenka į sąrašo intervalą". Tai pamačius, mes jau žinosime kur klaida.</p>
+<p>Šį kartą, eksperimentuodami, mes viršijome sąrašo ribą. O kas atsitiktų, jei mes tą ribą peržengtume į kitą pusę, tai yra - parinktume neigiamą indeksą. Turbūt turėtų būti ta pati IndexError klaida!?</p>
+<iframe id="ifr_5688" class="pyframe" src="https://arzinai.lt/scormv2/public/6599c4b47d459" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Ogi, pasirodo, kad ne! Keistas sutvėrimas tas Pitonas - jis paėmė paskutinį elementą. Pasirodo, Pitone galime susinumeruoti ir atvirkštine tvarka :) Na, o mūsų studentų sąrašo indeksai bus tokie:</p>
+<table style="text-align: center; ">
+<thead>
+<tr>
+<th scope="col">&nbsp; &nbsp;Elementas&nbsp; &nbsp;</th>
+<th scope="col">&nbsp; &nbsp;Indeksas&nbsp; &nbsp;</th>
+<th scope="col">&nbsp; &nbsp;Neigiamas Indeksas&nbsp; &nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tomas</td>
+<td>0</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>Rimas</td>
+<td>1</td>
+<td>-3</td>
+</tr>
+<tr>
+<td>Rima</td>
+<td>2</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>Sigita</td>
+<td>3</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p>Tai tiek trumpai apie sąrašų indeksus.</p>

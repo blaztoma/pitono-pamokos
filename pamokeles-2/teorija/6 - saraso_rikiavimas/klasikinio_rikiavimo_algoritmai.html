@@ -1,0 +1,19 @@
+<h2>Klasikiniai rikiavimo algoritmai</h2>
+<p>Rikiavimas - skaičiavimams reikli ir dažnai atliekama procedūra. Todėl daugelis šiuolaikinių kalbų turi realizavę rikiavimo funkciją, kuria tereikia pasinaudoti. Šioje skiltyje pristatysime pora klasikinių rikiavimo algoritmų tam, kad suprastumėte kaip tai yra atliekama. Šis supratimas pravers, jei ateityje reikės kurti greitus, optimizuotus algoritmus.</p>
+<h4>Burbuliuko rikiavimo būdas</h4>
+<p>Burbuliuko (angl. <em>bubble sort</em>) rikiavimo metodas yra klasikinis algoritmas, naudojamas elementų rikiavimui pagal dydį. Šis algoritmas veikia perstumdant kiekvieną elementą sąraše, palyginant jį su kaimyniniais elementais ir, jei reikia, keičiant vietomis.</p>
+<iframe id="ifr_4207" class="pyframe" src="https://arzinai.lt/scormv2/public/65a2cbaea1144" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Burbuliuko rikiavimo būdas yra lengvai suprantamas ir paprastai realizuojamas, tačiau jis yra vienas lėčiausių rikiavimo būdų.</p>
+<h4>Min-Max rikiavimo būdas</h4>
+<p>Min-max rikiavimo metodas yra paprastas algoritmas, kuris randa mažiausią ir didžiausią elementus sąraše ir paeiliui iškelia juos į atitinkamas sąrašo puses. Šis metodas yra efektyvus mažiems sąrašams, tačiau kaip ir burbuliuko metodas, nėra labai efektyvus dideliems duomenų kiekiams.</p>
+<iframe id="ifr_6153" class="pyframe" src="https://arzinai.lt/scormv2/public/65a2cd70018cc" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<h4>Greitojo rikiavimo būdas</h4>
+<p>Angliškas šio algoritmo pavadinimas - <em>Quick sort</em>. Šis algoritmas yra vienas iš efektyviausių ir plačiausiai naudojamų rikiavimo algoritmų, ypač dideliems duomenų kiekiams. Jis naudoja „dalyk ir valdyk“ strategiją rikiavimui atlikti. Greitojo rikiavimo algoritmas veikia šiais etapais:</p>
+<ul>
+  <li>Pasirenkamas elementas sąraše, vadinamas atskyrimo tašku.</li>
+  <li>Perstumiami visi mažesni elementai į atskyrimo taško kairę pusę ir visi didesni – į dešinę.</li>
+  <li>Taikomas tas pats procesas rekursiškai atskyrimo taško kairėje ir dešinėje pusėse.</li>
+</ul>
+<iframe id="ifr_772" class="pyframe" src="https://arzinai.lt/scormv2/public/65a2cf3711032" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<h4>Apibendrinimas</h4>
+<p>Čia pamatėte tris pagrindinius rikiavimo algoritmus. Šiame kurse jums nereikia giliai suprasti kaip jie veikia. Jei ateityje mokysitės kaip programuoti efektyvias programas, jums teks susipažinti bent su dešimčia rikiavimo algoritmų. Na o kol kas pasinaudokite tomis rikiavimo funkcijomis, kurias teikia Pitonas.</p>

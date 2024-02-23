@@ -1,0 +1,22 @@
+<h2>Numatyti ir vardiniai parametrai</h2>
+<h4>Numatyti parametrai</h4>
+<p>Ne visada kviečiant funkciją, jai paduodami argumentai su skirtingomis reikšmėmis. Pavyzdžiui, skaičiuojant prekių kainas Lietuvoje, pridėtinės vertės mokestis bus 21 procentas. Šį mokestį reikės pakeisti tik tuomet, kai skaičiuosime prekes kitoje šalyje. Jei mūsų pagrindinis verslas Lietuvoje, tuomet kiekvieną kartą nurodinėti šią reikšmę nėra daug prasmės.</p>
+<p>Tuo tikslu, Pitono funkcijoje mes galime apibrėžti numatytus parametrus ir jų nenurodinėti, jei nėra reikalo. Tai daroma tokiu būdu:</p>
+<iframe id="ifr_591" class="pyframe" src="https://arzinai.lt/scormv2/public/659906df74a47" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Ar pastebite - apskaičiuojant prekės kainą Lietuvoje mes nenurodėme 21 procento argumento reikšmės, tuo tarpu skaičiuojant kainą Graikijoje - tai turėjome padaryti, nes PVM Graikijoje skiriasi nuo numatytos reikšmės.</p>
+
+<h4>Vardiniai parametrai</h4>
+<p>Panagrinėkime pavyzdį, kai reikia sudaryti funkciją, spausdinančią ataskaitą apie kompiuterio komponentus ir jų kainą.</p>
+<iframe id="ifr_9854" class="pyframe" src="https://arzinai.lt/scormv2/public/65990b127efa3" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Kaip matote - parametrų yra daug ir antrą kartą iškviesdami funkciją mes padarėme klaidą! Per skubėjimą grafinei plokštei priskyrėm "Asus", o monitoriui - "Geforce 4090". Kadangi funkcijai labai svarbi parametrų tvarka - ji išvedė neteisingą ataskaitą.</p>
+<p>Kaip gi šito išvengti? Čia galime pasitelkti vardinius parametrus. Kai iškviesdami funkciją tiksliai nurodome argumentų vardus. Panagrinėkite pakeistą pavyzdį. Kai turime vardus - nesvarbi jų tvarka iškviečiant funkciją.</p>
+<iframe id="ifr_337" class="pyframe" src="https://arzinai.lt/scormv2/public/65990f8c8f444" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Man atrodo - dabar suklysti bus sunkiau, nors dėl to ir reikia kiek daugiau triūso :) O dabar sujunkime tai ką sužinojome norėdami parašyti efektyvias funkcijas.</p>
+
+<h4>Numatytų parametrų ir vardinių argumentų naudojimas kartu</h4>
+<p>Įsivaizduokite, kad esate Intel ir Geforce kompanijų atstovas Lietuvoje ir kitus gaminius pardavinėjate retai. Tuomet tą ilgą kreipinį į ataskaitos spausdinimą galime sutrumpinti panaudoję numatytus parametrus.</p>
+<iframe id="ifr_2987" class="pyframe" src="https://arzinai.lt/scormv2/public/659911ad910b7" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Atkreipkite dėmesį į tai, kad visi būtini funkcijos parametrai turi būti aprašyti prieš numatytuosius. Tai yra, visus numatytuosius parametrus aprašykite funkcijos gale. Kitu atveju Pitonas jums rodys klaidą.</p>

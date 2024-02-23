@@ -1,0 +1,11 @@
+<h2>Patikrinimas vienoje eilutėje (inline if / ternary operator)</h2>
+<p>If sakinį galime sutrumpinti panaudodami <code>ternarinį</code> operatorių. Taip kelių eilučių <code>if</code> sakinį galime užrašyti viena eilute.</p>
+<p>Sintaksė:</p>
+<pre>[ką daryti True atveju] if [patikrinimo sąlyga] else [ką daryti False atveju]
+</pre>
+<p>Tarkime, turime tokią užduotį: jeigu pažymys yra 10, tai turi būti atspausdinama "Puikai", o jeigu pažymys yra kitoks, tai turi būti atspausdinama "Galima geriau".</p>
+<p>Pradžioje padarykime tai paprastuoju būdu:</p>
+<iframe id="ifr_5647" class="pyframe" src="https://arzinai.lt/scormv2/public/6564f72cdfc1b" width="100%" height="30" frameborder="0" allow="fullscreen" title="Inline 1"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>O dabar supaprastinkime šį kodą panaudodami ternarinį operatorių:</p>
+<iframe id="ifr_1576" class="pyframe" src="https://arzinai.lt/scormv2/public/6564f780cbaa3" width="100%" height="20" frameborder="0" allow="fullscreen" title="Inline 2"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Kaip matome - sutaupėme pora eilučių. Vis tik - reikėtų atsargiai naudoti ternarinius operatorius. Programuotojai lig šiol diskutuoja ar verta juos naudoti. Manoma, jog jie gali sumažinti programos skaitomumą ir įtakoti klaidų atsiradimą.</p>

@@ -1,0 +1,35 @@
+<h2>Sąrašo skaidymas ir sujungimas</h2>
+<p>Sąrašus galima sujungti į teksto eilutes ir teksto eilutes galima išskaidyti į sąrašą.</p>
+<ul>
+  <li>Kai norime list -&gt; str, tuomet naudojame join metodą.</li>
+  <li>Kai norime str -&gt; list, tuomet naudojame split metodą.</li>
+</ul>
+<p><strong>Sujungimas</strong></p>
+<p>Sujungimui naudojame metodą <code>join()</code>, kuris sujungia sąrašo elementus į teksto eilutę. Sintaksė:</p>
+<blockquote>
+'&lt;skirtukas tarp kiekvieno elemento&gt;'.join(&lt;sąrašas&gt;)
+</blockquote>
+
+<p><strong>Skaidymas</strong></p>
+<p>Skaidymui naudojame metodą <code>split()</code>, kuris teksto eilutę išskaido į sąrašą. Sintaksė:</p>
+
+<blockquote>
+&lt;teksto eilutė=""&gt;.split(&lt;skirtukas pagal="" ką="" skelti=""&gt;)
+</blockquote>
+
+<h4>Pavyzdžiai</h4>
+<p>Sąrašą <code>sarasas</code> paverčiame eilute sujungdami tarpu jo elementus.</p>
+<iframe id="ifr_1813" class="pyframe" src="https://arzinai.lt/scormv2/public/65a277ce5126b" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Paversti sąrašą eilute galime naudodami įvairius skirtukus (arba jų nenaudodami).</p>
+<iframe id="ifr_5874" class="pyframe" src="https://arzinai.lt/scormv2/public/65a27828dc8e3" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Į eilutes galime paversti ne tik eilučių sąrašus, bet ir skaičių sąrašus. Tiesa, tai nėra taip paprasta. Pamėginkite ;)</p>
+<iframe id="ifr_8028" class="pyframe" src="https://arzinai.lt/scormv2/public/65a278ab927a0" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Norėdami skaičius paversti eilute, turime kiekvieną elementą paversti į eilutę. Šiame pavyzdyje parodyti du būdai, kaip tai padaryti.</p>
+<iframe id="ifr_1078" class="pyframe" src="https://arzinai.lt/scormv2/public/65a2790165e8f" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Eilutės pavertimas į sąrašą (skirtukas yra tarpas).</p>
+<iframe id="ifr_6669" class="pyframe" src="https://arzinai.lt/scormv2/public/65a27998412a5" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Pavyzdys su datomis, kurios pateiktos eilute. Datų eilutė paverčiama sąrašu ir pridedamos papildomos eilutės.</p>
+<iframe id="ifr_2273" class="pyframe" src="https://arzinai.lt/scormv2/public/65a27a02e7992" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Šitas pavyzdys rodo, kaip skaičių eilutę pavesti skaičių sąrašu dviem būdais.</p>
+<iframe id="ifr_9479" class="pyframe" src="https://arzinai.lt/scormv2/public/65a27a5868e50" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Tikiuosi - gerai išsinagrinėjote pavyzdžius. Šitų dalykų jums tikrai prisireiks!</p>

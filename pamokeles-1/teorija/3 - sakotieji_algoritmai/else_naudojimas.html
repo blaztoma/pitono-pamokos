@@ -1,0 +1,45 @@
+<h2>Kiti atvejai - else naudojimas</h2>
+<p><code>Else</code> į lietuvių kalbą galima išversti kaip <code>kitu atveju</code> arba <code>kitais atvejais</code>. Ši konstrukcija pasižymi tokiomis savybėmis:</p>
+<ul>
+  <li><code>else</code> blokas bus vykdomas visada kai jokia kita, prieš jį ėjusi sąlyga nebus teisinga.</li>
+  <li><code>else</code> dalyje nebereikia rašyti jokios sąlygos. Jei norite pridėti ir sąlygą, tuomet naudokite <code>elif</code> konstrukciją.</li>
+  <li><code>else</code> dalis rašoma tik vieną kartą, visos <code>if</code> konstrukcijos pabaigoje.</li>
+  <li><code>else</code>, kaip ir <code>elif</code> blokai yra nebūtini.</li>
+  <li>else bloką dažnai naudojame, kai:
+    <ul>
+	  <li>norime užsitikrinti, kad sąlyga nepaliks neapdorotų variantų;</li>
+    <li>išvesti klaidos pranešimą;</li>
+    <li>norime leisti kartoti veiksmą;</li>
+    <li>norime aptikti klaidą.</li>
+      </ul></li>
+</ul>
+<p><code>else</code> sintaksė:</p>
+<pre>if sąlyga:
+    # šio bloko kodas vykdomas jeigu tenkinama sąlyga
+else:
+    # šio bloko kodas vykdomas jeigu netenkinama sąlyga
+</pre>
+<p><code>else</code> sintaksė, kai naudojama kartu su <code>elif</code>:</p>
+<pre>if sąlyga_1:
+    # šio bloko kodas vykdomas jeigu tenkinama sąlyga_1
+elif sąlyga_2:
+    # šio bloko kodas vykdomas jeigu tenkinama sąlyga_2
+    # ...
+elif sąlyga_n:
+    # šio bloko kodas vykdomas jeigu tenkinama sąlyga_n
+else:
+    # šio bloko kodas vykdomas jeigu netenkinamos visos aukščiau esančios sąlygos
+</pre>
+<h3>Pavyzdžiai</h3>
+<p>Skaičiaus palyginimas.</p>
+<iframe id="ifr_3546" class="pyframe" src="https://arzinai.lt/scormv2/public/6564f3f289692" width="100%" height="30" frameborder="0" allow="fullscreen" title="Else 1"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Teksto palyginimas</p>
+<iframe id="ifr_3883" class="pyframe" src="https://arzinai.lt/scormv2/public/6564f448f1248" width="100%" height="30" frameborder="0" allow="fullscreen" title="Else 2"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<p>Klaidingo varianto aptikimas. Galime patikrinti kintamąjį ir nustatyti ar jis:</p>
+<ul>
+    <li>yra tuščias objektas</li>
+    <li>yra tuščia eilutė</li>
+    <li>jam nurodyta <code>None</code> reikšmė</li>
+    <li>jo reikšmė yra lygi 0</li>
+</ul>
+<iframe id="ifr_3143" class="pyframe" src="https://arzinai.lt/scormv2/public/6564f5cc12ad3" width="100%" height="30" frameborder="0" allow="fullscreen" title="Else 3"></iframe><script> window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>

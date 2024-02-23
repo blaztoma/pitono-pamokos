@@ -1,0 +1,52 @@
+<h2>Sąrašo karpymas</h2>
+<h3>Sąrašo karpymas (angl. <em>list slicing</em>)</h3>
+<p>Jeigu norime iškarpyti tam tikras sąrašo dalis, tam mes galime naudoti metodiką, pavadintą <em>list slicing</em>.</p>
+Pats karpymas vyksta nurodant parametus tarp <code>[ ]</code> skliaustelių. Po karpymo yra grąžinamas naujas sąrašas.
+
+<h4>Sintaksė</h4>
+<p>Karpant sąrašą mes galima nurodyti norimus rėžius tokiu būdu:</p>
+<pre>sąrašo_pavadinimas[pradžia:pabaiga]
+sąrašo_pavadinimas[pradžia:pabaiga:žingsnis]
+</pre>
+<p>Paaiškinimai:</p>
+<ul>
+  <li><code>sąrašo_pavadinimas</code> - apdorojamas sąrašas.</li>
+  <li><code>pradžia</code> - indeksas, ties kuriuo pradedamas iškirpimas (įeina).</li>
+  <li><code>pabaiga</code> - indeksas, ties kuriuo baigiamas iškirpimas (neįeina).</li>
+  <li><code>žingsnis</code> - kiek elementų praleisti po kiekvieno įtraukto elemento.</li>
+</ul>  
+<p>Karpant nebūtina nurodyti visų reikšmių. Panagrinėkime kelis variantus...</p>
+
+<p>Viskas imama pradžios iki nurodytos <code>pabaigos</code>:</p>
+<pre>sąrašo_pavadinimas[:pabaiga]
+</pre>
+
+<p>Viskas įtraukiama nuo nurodytos <code>pradžios</code> iki sąrašo galo:</p>
+<pre>sąrašo_pavadinimas[pradžia:]
+</pre>
+
+<p>Viskas įtraukiama nuo pradžios iki galo:</p>
+<pre>sąrašo_pavadinimas[:]
+</pre>
+
+<p>Viskas įtraukiama nuo pradžios iki nurodytos <code>pabaigos</code>, darant nurodytą <code>žingsnį</code>:</p>
+<pre>sąrašo_pavadinimas[:pabaiga:žingsnis]
+</pre>
+
+<p>Viskas įtraukiama nuo nurodytos <code>pradžios</code> iki galo, darant nurodytą <code>žingsnį</code>:</p>
+<pre>sąrašo_pavadinimas[pradžia::žingsnis]
+</pre>
+
+<h4>Pavyzdžiai</h4>
+<p>Kaip matote - daug patogių priemonių sąrašams karpyti. Toliau esantys pavyzdžiai padės išsiaiškinti, kaip šios formose veikia.</p>
+<p>Keli pavyzdžiai, naudojantys aukščiau aprašytą sintaksę, kai nurodoma pradžia ir pabaiga.</p>
+<iframe id="ifr_7641" class="pyframe" src="https://arzinai.lt/scormv2/public/65a2661b56bea" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Keli pavyzdžiai, naudojantys aukščiau aprašytą sintaksę, kai nenurodoma pradžia arba pabaiga.</p>
+<iframe id="ifr_3177" class="pyframe" src="https://arzinai.lt/scormv2/public/65a26692ac6c3" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Keli pavyzdžiai, naudojantys <code>pradžia:pabaiga:žingsnis</code>.</p>
+<iframe id="ifr_9554" class="pyframe" src="https://arzinai.lt/scormv2/public/65a26754a3706" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<iframe id="ifr_8453" class="pyframe" src="https://arzinai.lt/scormv2/public/65a26788319a7" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Įdomus triukas! Nurodydami žingsnį <code>-1</code> gausime atvirkštinį sąrašą.</p>
+<iframe id="ifr_8850" class="pyframe" src="https://arzinai.lt/scormv2/public/65a268135bd89" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Pavyzdys, kai padarome sąrašo kopiją. Šiuo atveju, kai pakeisime reikšmę kopijoje, tai originalus sąrašas nepasikeis.</p>
+<iframe id="ifr_489" class="pyframe" src="https://arzinai.lt/scormv2/public/65a268876acc7" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>

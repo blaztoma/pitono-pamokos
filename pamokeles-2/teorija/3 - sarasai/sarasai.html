@@ -1,0 +1,27 @@
+<h2>Sąrašai</h2>
+<h3>Kas yra sąrašai</h3>
+<p>Programuojant dažnai tenka dirbti su duomenų rinkiniais. Pitonas - viena patogiausių kalbų tokiems dalykams. Sąrašas yra viena iš daugelio integruotų Pitono duomenų struktūrų, leidžiančių dirbti su duomenų rinkiniu nuoseklia tvarka.</p>
+<p>Tarkime, norime sudaryti studentų sąrašą:</p>
+<ul>
+  <li>Tomas</li>
+  <li>Rimas</li>
+  <li>Rima</li>
+  <li>Sigita</li>
+</ul>
+<p>Pitono programoje galime sukurti kintamąjį, pavadintą <code>studentai</code> ir jam priskirti visus šiuos vardus:</p>
+<iframe id="ifr_2346" class="pyframe" src="https://arzinai.lt/scormv2/public/6599c08fbb88c" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Ar pastebėjote šiuos, su sąrašu susijusius dalykus:</p>
+<ul>
+  <li>sąrašas pradedamas simboliu <code>[</code> ir baigiamas <code>]</code>;</li>
+  <li>sąrašo elementai atskiriami kableliu (jokie kiti skirtukai netinka);</li>
+  <li>po kablelio paprastai padedamas tarpas lengvesniam programos skaitomumui (bet veiks ir be jo).</li>
+</ul>
+<h3>Sąrašo elementų tipai</h3>
+<p>Gali kilti klausimas: ką mes galime patalpinti sąraše. Ogi - daug ką! Matėte pavyzdį su eilutėmis, tačiau sąraše galime talpinti bet kurio Pitono tipo elementą.</p>
+<p>Štai taip atrodo int tipo sąrašas. Tebūnie tai bus studentų krepšininkų ūgiai:</p>
+<iframe id="ifr_3839" class="pyframe" src="https://arzinai.lt/scormv2/public/6599c184b10af" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Skirtingai nuo kai kurių kitų programavimo kalbų - skirtingus tipus galime talpinti viename sąraše. Paimkime ir padarykime iš studentų vardų ir jų ūgių vieną sąrašą:</p>
+<iframe id="ifr_1772" class="pyframe" src="https://arzinai.lt/scormv2/public/6599c1cfb777d" width="100%" height="1000" frameborder="0" allow="fullscreen" title="sarasai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<h3>Tušti sąrašai</h3>
+<p>Dažniausiai programoje nebūna surašytų duomenų. Duomenys kaupiami atskiruose failuose, duomenų bazėse, interneto serveriuose. Tol kol jie bus užkrauti, mes galime apibrėžti tuščią sąrašą, kuris neturi nei vieno elemento.</p>
+<blockquote>studentai = []</blockquote>

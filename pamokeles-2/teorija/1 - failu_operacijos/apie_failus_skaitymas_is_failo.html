@@ -1,0 +1,21 @@
+<h2>Apie failus, skaitymas iš failo</h2>
+<p>Turbūt jums jau seniai ne naujiena, kad kompiuteriai, telefonai ir daugelis kitų įrenginių naudoja failų sistemas duomenims saugoti ir nuskaityti. Mes galime sukurti bet kokio tipo failą ir ten išsaugoti bei nuskaityti mums reikalingus duomenis - prekių sąrašą, žaidėjų surinktus taškus, forumo žinutes ir daug kitų dalykų. Net ir mūsų Pitono programos yra saugomos failuose. Net ir duomenų bazės - jos irgi saugomos tam tikros struktūros failuose.</p>
+<p>Taigi, pabandykime išmokti apdoroti failus su Pitonu. Išmokime jo pagalba skaityti ir rašyti įvairių rūšių failus. Tarkime, kad turime failą pavadinimu pirmasis_failas.txt su tokiu turiniu:</p>
+<pre>Labas, pasauli!
+</pre>
+<p>Toliau esančiame pavyzdyje, pažvelkite į žemiau programos esančią skiltį pavadintą <strong>Failai</strong>. Paspauskite "pirmasis_failas.txt" pavadinimą ir pamatysite šio failo turinį. Taigi, pamėginkime programinio kodo pagalba perskaityti jo turinį ir atspausdinti konsolėje.</p>
+<iframe id="ifr_1668" class="pyframe" src="https://arzinai.lt/scormv2/public/659974c6352c2" width="100%" height="1000" frameborder="0" allow="fullscreen" title="failai 1"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Paeksperimentuokite - pakeiskite failo turinį ir pamėginkite vėl įvykdyti programą.</p>
+<p>Ši programa veikia tokiu būdu:</p>
+<ul>
+  <li><code>with</code> raktažodis pasako, kad bloko viduje (po dvitaškio) esantis kodas bus vykdomas su failu, kuris nurodytas <code>open</code> funkcijos skliausteliuose.</li>
+  <li>atidarytas failas priskiriamas kintamajam (failo objektui) <code>failas</code>.</li>
+  <li>turinį nuskaitome panaudodami to failo objekto funkciją (metodą) <code>read()</code> ir priskiriam kintamajam <code>turinys</code>.</li>
+  <li>turinį atspausdiname funkcijoje <code>print()</code> nurodydami kintamąjį, kuriam priskirtas failo turinys.</li>
+  <li>Kai naudojama <code>with</code>, tuomet failas po visų bloke esančių operacijų yra uždaromas.</li>
+</ul>
+<p>Failą nuskaityti galime dar vienu būdu - nenaudojant <code>with</code> raktažodžio. Tai paprasta:</p>
+<iframe id="ifr_7818" class="pyframe" src="https://arzinai.lt/scormv2/public/65998d77c5866" width="100%" height="1000" frameborder="0" allow="fullscreen" title="failai 1"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Kaip matote - prisideda tai, kad reikia patiems uždaryti failą naudojant funkciją <code>close()</code>. Failo uždarymas yra labai svarbi detalė, kurios negalima pamiršti, nes neuždarius failo, jo negalės naudoti kitos programos. Dėl to - geriausia yra naudoti <code>with</code> sintaksę, kuri leidžia į šią detalę nekreipti dėmesio.</p>
+<p>Kol kas tiek, trumpai, apie tai kaip nuskaityti nesudėtingos struktūros failą. Tačiau failai gali būti daug sudėtingesni. Einam toliau!</p>

@@ -1,0 +1,19 @@
+<h2>Funkcijos reikšmų gražinimas</h2>
+<p>Kaip ir daugelyje programavimo kalbų, Pitone naudojamas raktažodis <code>return</code> funkcijoje apskaičiuotų reikšmių gražinimui. Prisiminkime funkcijos sintaksę:</p>
+<pre>def funkcijos_pavadinimas():
+    # funkcijos kodas
+    return grazinamas_atsakymas
+</pre>
+<p>Paprasčiausias būdas pagriebti funkcijos apskaičiuotą reikšmę (ar kelias reikšmes!) - tai funkcijos rezultatą priskirti kintamajam:</p>
+<pre>atsakymas = funkcijos_pavadinimas()
+print(atsakymas)
+</pre>
+<p>Bet... tai nėra visuomet būtina. Kartais galime vieną funkciją naudoti kaip kitos funkcijos parametrą. Čia funkcija <code>print</code> pirmiau iškvies <code>funkcijos_pavadinimas</code> ir gautą rezultatą iš karto atspausdins.</p>
+
+<h4>Pavyzdžiai</h4>
+<p>Pradėsime nuo paprasto pavyzdžio, kur funkcija suformuoja pasisveikinimo tekstą:</p>
+<iframe id="ifr_7128" class="pyframe" src="https://arzinai.lt/scormv2/public/659898596569f" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+
+<p>Kaip matote - viskas paprasta: suformuojame reikšmę ir ją gražiname. Visgi - kartais jums prisireiks apskaičiuoti ne vieną, o kelias reikšmes. Kaip tada? Pitone tai išspręsta paprastai - gražiname reikšmes atskirdami jas kableliais.</p>
+<p>Parašykime supaprastintą (neįvertinant galimų kompleksinių reikšmių) kvadratinės lygties skaičiavimo funkciją, kuri gražina dvi reikšmes.</p>
+<iframe id="ifr_3183" class="pyframe" src="https://arzinai.lt/scormv2/public/65989b734ca7b" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Funkcija"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>

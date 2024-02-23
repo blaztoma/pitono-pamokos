@@ -1,0 +1,113 @@
+<h2>Skaičiai ir matematinės operacijos</h2>
+<h3 id="Pagrindiniai-skai%C4%8Di%C5%B3-tipai">Pagrindiniai skaičių tipai</h3>
+<table style="border-collapse: collapse; width: 29.2322%; height: 132px; border-width: 1px; border-style: solid;" border="1">
+<thead>
+<tr style="height: 51px;">
+<th style="width: 46.2838%; height: 51px; padding: 5px; border-width: 1px;">int (integer)</th>
+<th style="width: 53.7162%; height: 51px; padding: 5px; border-width: 1px;">float (floating point)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 27px;">
+<td style="width: 46.2838%; height: 27px; padding: 5px; border-width: 1px;">8</td>
+<td style="width: 53.7162%; height: 27px; padding: 5px; border-width: 1px;">8.5</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 46.2838%; height: 27px; padding: 5px; border-width: 1px;">10</td>
+<td style="width: 53.7162%; height: 27px; padding: 5px; border-width: 1px;">10.0</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 46.2838%; height: 27px; padding: 5px; border-width: 1px;">-5</td>
+<td style="width: 53.7162%; height: 27px; padding: 5px; border-width: 1px;">-5.5</td>
+</tr>
+</tbody>
+</table>
+<p>Atkreipkite dėmesį į tai, kad norėdami Pitonui parodyti, jog kintamasis yra float tipo, turime skaičių rašyti su kableliu (tašku), net jei jis ir neturi trupmeninės dalies.</p>
+<h2 id="Matematiniai-operatoriai">Matematiniai operatoriai</h2>
+<table style="border-collapse: collapse; border-style: solid;" border="1">
+<thead>
+<tr>
+<th style="padding: 5px;">Operatorius</th>
+<th style="padding: 5px;">Pavadinimas</th>
+<th style="padding: 5px;">Pavyzdys</th>
+<th style="padding: 5px;">Paaiškinimas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 5px;"><code>+</code></td>
+<td style="padding: 5px;">Sudėtis</td>
+<td style="padding: 5px;"><code>5 + 3</code></td>
+<td style="padding: 5px;">Sudeda&nbsp;<code>5</code>&nbsp;ir&nbsp;<code>3</code></td>
+</tr>
+<tr>
+<td style="padding: 5px;"><code>-</code></td>
+<td style="padding: 5px;">Atimtis</td>
+<td style="padding: 5px;"><code>5 - 3</code></td>
+<td style="padding: 5px;">Atima&nbsp;<code>3</code>&nbsp;iš&nbsp;<code>5</code></td>
+</tr>
+<tr>
+<td style="padding: 5px;"><code>*</code></td>
+<td style="padding: 5px;">Daugyba</td>
+<td style="padding: 5px;"><code>5 * 3</code></td>
+<td style="padding: 5px;">Sudaugina&nbsp;<code>5</code>&nbsp;iš&nbsp;<code>3</code></td>
+</tr>
+<tr>
+<td style="padding: 5px;"><code>/</code></td>
+<td style="padding: 5px;">Dalyba</td>
+<td style="padding: 5px;"><code>5 / 3</code></td>
+<td style="padding: 5px;">Padalina&nbsp;<code>5</code>&nbsp;iš&nbsp;<code>3</code></td>
+</tr>
+<tr>
+<td style="padding: 5px;"><code>**</code></td>
+<td style="padding: 5px;">Laipsnis</td>
+<td style="padding: 5px;"><code>5 ** 3</code></td>
+<td style="padding: 5px;">Pakelia&nbsp;<code>5</code>&nbsp;laipsniu&nbsp;<code>3</code></td>
+</tr>
+<tr>
+<td style="padding: 5px;"><code>%</code></td>
+<td style="padding: 5px;">Liekana</td>
+<td style="padding: 5px;"><code>5 % 3</code></td>
+<td style="padding: 5px;">Liekana (ats. 2)</td>
+</tr>
+<tr>
+<td style="padding: 5px;"><code>//</code></td>
+<td style="padding: 5px;">Dalyba</td>
+<td style="padding: 5px;"><code>5 // 3</code></td>
+<td style="padding: 5px;">Sveiko skaičiaus dalyba (ats. 1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Pavyzd%C5%BEiai">Pavyzdžiai</h3>
+<h4>Skaičių išvedimas</h4>
+<p>Tiesiog įrašome skaičių į <code>print</code> komandą be kabučių.</p>
+<iframe id="ifr_2104" class="pyframe" title="Skaičių išvedimas" src="https://arzinai.lt/scormv2/public/65633a0bd0c95" width="100%" height="50" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Paprasčiausios sveikų skaičių operacijos</h4>
+<p>Keturios pagrindinės matematinės operacijos.</p>
+<iframe id="ifr_7082" class="pyframe" title="Kelios operacijos" src="https://arzinai.lt/scormv2/public/65633a4f0a0ec" width="100%" height="100" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Paprasčiausios racionalių skaičių operacijos</h4>
+<p>Operacijos, kurios įtraukia skaičius su kableliu.</p>
+<iframe id="ifr_4671" class="pyframe" title="Racionaliųjų operacijos" src="https://arzinai.lt/scormv2/public/65633a8e38e71" width="100%" height="100" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Kėlimas laipsniu</h4>
+<p>Kėlimas laipsniu žymimas dviem žvaigždutėm (<code>**</code>).</p>
+<iframe id="ifr_3941" class="pyframe" title="Kėlimas laipsniu" src="https://arzinai.lt/scormv2/public/65633ad2ef2ee" width="100%" height="100" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Liekanos operacija</h4>
+<p>Uždaviniuose jums dažnai prireiks gauti liekaną po dalybos operacijos. Tam naudojamas <code>%</code>.</p>
+<iframe id="ifr_3796" class="pyframe" title="Liekana" src="https://arzinai.lt/scormv2/public/65633b16eb2d3" width="100%" height="100" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Dalyba ir sveikoji dalyba</h4>
+<p>Paprasta dalybos operacija (<code>/</code>) gražins skaičių su kableliu. Jei norime gauti sveiką skaičių, turi būti naudojama sveiko skaičiaus dalybos operacija (<code>//</code>)</p>
+<iframe id="ifr_2573" class="pyframe" title="Dalybos" src="https://arzinai.lt/scormv2/public/65633b4ad1b2d" width="100%" height="100" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Matematinių operacijų tvarka</h4>
+<p>Matematinių operacijų tvarka yra tokia pati kaip ir įprastinėje matematikoje. Jei norime nurodyti matematinių operacijų tvarką - turime naudoti skliaustelius.</p>
+<iframe id="ifr_2125" class="pyframe" title="Operacijų tvarka" src="https://arzinai.lt/scormv2/public/65633b81582c6" width="100%" height="100" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
+<h4>Koks tipas?</h4>
+<p>Pitonas leidžia pasižiūrėti koks skaičiaus arba kintamojo tipas. Tam naudojame komandą <code>type</code>.</p>
+<iframe id="ifr_9123" class="pyframe" title="Tipai" src="https://arzinai.lt/scormv2/public/65633e6f93da1" width="100%" height="100" frameborder="0" allow="fullscreen"></iframe>
+<script> window.addEventListener('message', function (event) { if (event.origin === 'https://arzinai.lt' && event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } }); </script>
