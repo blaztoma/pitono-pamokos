@@ -1,0 +1,38 @@
+<h2>Kiekio, sumos ir vidurkio skaičiavimas</h2>
+<p>Kiekio, sumos ir vidurkio skaičiavimas yra tokia dažna operacija, kad joms programavimo kalbose arba bibliotekose jau yra parengti skaičiavimo algoritmai ir dažnai jais tereikia pasinaudoti.</p>
+<p>Kita vertus, ne visada turime tokias duomenų struktūras, kurioms galėtume panaudoti šiuos algoritmus. Tas pat galioja ir tiems atvejams, kai elementų kiekis nenuspėjamas. Dėl to, neabėjotinai verta perprasti šiuos dalykus.</p>
+<h3>Kiekio skaičiavimas</h3>
+<p>Kiekio skaičiavimas paprastai turi tokią formą:</p>
+<pre>kiekis = 0
+while elementai_nesibaige:
+	kiekis += 1
+print(kiekis)
+</pre>
+<p>Pradėkime nuo paprasto, nors ir ne visai realistinio pavyzdžio. Suskaičiuosime, kiek cikle yra elementų.</p> 
+<iframe id="ifr_3935" class="pyframe" src="https://arzinai.lt/scormv2/public/6581f984dac78" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Kiekis 1"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Uždavinys nerealistinis dėl to, kad turėdami tokį ciklą mes jau žinome kiek tų elementų yra. Dabar paimkime kitą pavyzdį. Įsivaizduokime, kad rungtynių administratorius turi suvesti žaidėjų vardus, o programa turi suskaičiuoti jų kiekį.</p>
+<iframe id="ifr_2430" class="pyframe" src="https://arzinai.lt/scormv2/public/6582041cb125a" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Kiekis 2"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Manau supratote kiekio skaičiavimo idėją. Daugiau išmoksite praktikuodamiesi spręsti uždavinius.</p>
+<h3>Sumos skaičiavimas</h3>
+<p>Sumos skaičiavimas labai panašus į kiekio skaičiavimą ir paprastai turi tokią formą:</p>
+<pre>suma = 0
+while elementai_nesibaige:
+	suma += elementas
+print(suma)
+</pre>
+<p>Vėl pradėkime nuo paprasto pavyzdžio ir suskaičiuokime kokia yra skaičių nuo 1 iki 10 suma.</p>
+<iframe id="ifr_1303" class="pyframe" src="https://arzinai.lt/scormv2/public/6581febec4778" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Suma 1"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Na o dabar pereikime prie realesnio pavyzdžio ir susumuokime įvedamų prekių kainas.</p>
+<iframe id="ifr_4840" class="pyframe" src="https://arzinai.lt/scormv2/public/658200344b789" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Suma 2"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<h3>Vidurkio skaičiavimas</h3>
+<p>Vidurkio skaičiavimas apjungia kiekio ir sumos skaičiavimą ir paprastai turi tokią formą:</p>
+<pre>suma = 0
+kiekis = 0
+while elementai_nesibaige:
+	kiekis += 1
+	suma += elementas
+print(suma / kiekis)
+</pre>
+<p>Kaip matote, prisideda sumos padalinimas iš kiekio. Paprasta! :) Tai dabar suskaičiuokime kainų vidurkį šiek tiek pakeisdami praeito uždavinio kodą.</p>
+<iframe id="ifr_7157" class="pyframe" src="https://arzinai.lt/scormv2/public/658201821988d" width="100%" height="1000" frameborder="0" allow="fullscreen" title="Suma 2"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Taigi, manau pasitreniravome :) Laikas spręsti uždavinius ;)</p>

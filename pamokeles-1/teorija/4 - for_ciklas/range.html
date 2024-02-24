@@ -1,0 +1,31 @@
+<h2>Range funkcija</h2>
+<p>Naudosime <code>range()</code> funkciją norėdami sugeneruoti tam tikrą skaičių seką.</p><p>Apie <code>range()</code> funkciją reikia žinoti, nes ji dažnai naudojama su žinomo kartojimo kiekio (<code>for</code>ciklu.</p>
+<h3>Sintaksė</h3>
+<h4>1-as variantas</h4>
+<blockquote>range(pabaiga)</blockquote>
+<p>Šiuo atveju sugeneruojama skaičių seka nuo <code>0</code> iki <code>pabaiga-1</code>. Tai yra, 0 patenka į sugeneruotą seką, o pabaiga - ne.</p>
+<h4>2-as variantas</h4>
+<blockquote>range(pradžia, pabaiga)</blockquote>
+<p>Šiuo atveju sugeneruojama skaičių seka nuo <code>pradžia</code> iki <code>pabaiga-1</code>. Tai yra, nurodyta pradžia patenka į sugeneruotą seką, o pabaiga - ne.</p>
+<h4>3-as variantas</h4>
+<blockquote>range(pradžia, pabaiga, žingsnis)</blockquote>
+<p>Šiuo atveju sugeneruojama skaičių seka nuo <code>pradžia</code> iki <code>pabaiga-1</code>. Kaip ir prieš tai buvusiuose pavyzdžiuose, nurodyta pradžia patenka į sugeneruotą seką, o pabaiga - ne. Skirtingai nuo ankstesnių pavyzdžių, generuojamos reikšmės kis ne 1, o nurodytu žingsniu.</p>
+<h4>Keli sintaksės naudojimo pavyzdžiai</h4>
+<pre>range(7) # nuo 0 iki 7 (skaičiai 0, 1, 2, 3, 4, 5, 6)
+range(2, 8) # nuo 2 iki 8 (skaičiai 2, 3, 4, 5, 6, 7)
+range(1, 6, 2) # nelyginiai skaičiai nuo 1 iki 6 (1, 3, 5)
+range(7, 0, -1) # nuo 7 iki 1 (skaičiai 7, 6, 5, 4, 3, 2, 1)
+</pre>
+<h3>Darbas su range</h3>
+<p><code>range()</code> funkcija unikali tuo, kad ji sukuria <code>range</code> objektą. Šis objektas nėra skaičių sąrašas.</p>
+<iframe id="ifr_3953" class="pyframe" src="https://arzinai.lt/scormv2/public/656ba8ec90cb6" width="100%" height="10" frameborder="0" allow="fullscreen" title="Range objektas"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Norėdami iš range objekto gauti skaičių sąrašą, turime panaudoti funkciją <code>list()</code>.</p>
+<iframe id="ifr_6275" class="pyframe" src="https://arzinai.lt/scormv2/public/656ba98091955" width="100%" height="10" frameborder="0" allow="fullscreen" title="Range objektas list"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Turbūt jau pastebėjote, kad <code>range()</code> neįtraukia paskutinio nurodyto skaičiaus. Kodėl gi taip yra? Jei neaišku - pažiūrėkite sintaksės aprašymą.</p>
+<p>Naudojant <code>range</code> galime nurodyti pradžią.</p>
+<iframe id="ifr_6837" class="pyframe" src="https://arzinai.lt/scormv2/public/656baa6de2cbf" width="100%" height="10" frameborder="0" allow="fullscreen" title="Range pradžia"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Šis pavyzdys įtraukia <code>žingsnį</code>, kurio reikšmė - <code>5</code>. Atkreipkite dėmesį, kad paskutinės reikšmės (<code>50</code>) neįtraukia.</p>
+<iframe id="ifr_509" class="pyframe" src="https://arzinai.lt/scormv2/public/656bab2857994" width="100%" height="10" frameborder="0" allow="fullscreen" title="Range žingsnis"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
+<p>Dabar, kai žinote <code>range()</code> funkcijos naudojimo niunsus, pasipraktikuokime. Pakeiskite aukščiau esantį kodą, kad būtų įtrauktas skaičius 50.</p>
+<p>Ko dar nebandėme, tai sudaryti skaičių sąrašą mažėjimo tvarka. Tam reikia nurodyti neigiamą <code>žingsnio</code> reikšmę. Atkreipkite dėmesį, kad paskutinė reikšmė neįtraukiama ir šiuo atveju.</p>
+<iframe id="ifr_7258" class="pyframe" src="https://arzinai.lt/scormv2/public/656bac83687c8" width="100%" height="10" frameborder="0" allow="fullscreen" title="Range mažėjančiai"></iframe><script>window.addEventListener('message', function (event) { if (event.data.type === 'resizeHeight') { const iframe = Array.from(document.querySelectorAll('iframe.pyframe')).find((frame) => frame.contentWindow === event.source); if (iframe) { iframe.height = event.data.newHeight; } } });</script>
