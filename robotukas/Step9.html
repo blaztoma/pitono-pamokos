@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lygis 9: Instrukcijų kartojimas</title>
+</head>
+<body>
+
+<h1>Lygis 9: Instrukcijų kartojimas</h1>
+<h2>Mokymosi medžiaga</h2>
+<p>Dažnai norime pakartoti instrukcijų seriją tam tikrą kiekį kartų. Pavyzdžiui, 8 lygyje reikėjo pasakyti Robotukui,
+    kad jis nuolat atliktų tą patį veiksmą. Pitonas turi savo būdų kaip tai realizuoti, tačiau mes pradėsime nuo
+    paprastų konstrukcijų. Dabar naudosime <code>repeat</code> kartojimo būdą, kuris paprastesnis už Pitono komandas,
+    tačiau būdingas tik Robotuko pasauliui. Pitonas naudoja <strong>for ciklus</strong> (apie juos papasakosiu vėliau),
+    kurie užrašomi taip: </p>
+<pre>
+for i in range(n):
+    # čia būtų
+    # kelios
+    # komandos
+</pre>
+<p>Robotuko pasaulyje galime užrašyti <code>repeat</code> <em>ciklą</em> tokiu būdu:</p>
+<pre>
+repeat n:   # kur n yra sveikas skaičius, toks kaip 3 ar 7
+    # čia būtų
+    # kelios
+    # komandos
+</pre>
+<p>Dėmesio</p>
+<p><code>repeat</code> komanda neveiks kitose Pitono aplinkose, tiktai Robotuko pasaulyje.</p>
+<p><strong>Ciklas</strong> yra instrukcijų blokas, kuris kartojamas. Kiekvienas kartas, kai ciklas pakartojamas yra
+    vadinamas iteracija. Taigi, žemiau esantis kodas turi 4 iteracijas.</p>
+<p>Šis kodas lieps Robotukui nubrėžti kvadratą:</p>
+<pre>
+repeat 4:
+    pirmyn()
+    suktis_kairėn()
+</pre>
+<p>Naudodami <code>repeat</code> kartojimą galime perrašyti ankstesnes programas taip, kad jose neliktų pasikartojančių
+    instrukcijų:</p>
+<pre>
+def suktis_dešinėn():
+    repeat 3:
+        suktis_kairėn()
+</pre>
+<p>Galite pakoreguoti kodą, kurį išsaugojote bibliotekos skirtuke, panaudodami pakartojimo bloką.</p>
+<p>Mokytojams</p>
+<p>Pagrindas, kodėl standartinį Pitoną papildėme <code>repeat</code> komanda, yra tas, kad nereikėtų vienu metu
+    pristatyti ciklų, kintamųjų, integruotų funkcijų (tokių kaip <code>range</code>) ir funkcijos argumentų sąvokos.</p>
+<p>Pagal kūrėjų sumanymą <code>n</code> <code>repeat</code> cikle <strong>privalo</strong> būti sveikasis skaičius; tai
+    negali būti kintamasis. Kai mokiniai sužinos apie kintamuosius, jie turėtų išmokti tinkamą Pitono sintaksę ciklams
+    realizuoti ir pamiršti nestandartinę <code>repeat</code> instrukciją.</p>
+
+<h2>Pabandyk!</h2>
+<p>Atidaryk <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%209" target="_blank">Robotuko
+    aplinkos</a> 9 lygį.</p>
+<img alt="_images/step9.png" src="_images/step9.png"/>
+<p>Pakeiskite 8 lygio metu sukurtą programą, šį kartą naudodami du kartojimo ciklus. Veiksmai nesiskirs, tačiau jūsų
+    sprendimas turėtų būti daug gražesnis. Nepamirškite naudoti komentarų, kad sprendimas būtų lengviau skaitomas!</p>
+</div>
+</div>
+
+<a href="Step8.html">Lygis 8: Klauskite</a>
+<a href="Content.html">Turinys</a>
+<a href="Practice1.html">Testas 1: repeat, if, def</a>
+
+</body>
+</html>

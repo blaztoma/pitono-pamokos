@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lygis 4: Komentavimas</title>
+</head>
+<body>
+
+<h1>Lygis 4: Komentavimas</h1>
+<blockquote>
+    <p>Svarbu</p>
+    <p>Kompiuterių programas rašykite taip, kad jas būtų lengva skaityti ir suprasti paprastiems <strong>žmonėms</strong>.</p>
+</blockquote>
+<h2>Mokymosi medžiaga</h2>
+<p>Rašydami programas, turėtumėte jas rašyti taip, kad kitiems žmonėms, kaip ir jums, būtų lengva jas skaityti ir jie
+    galėtų suprasti, ką
+    ką jos daro. Taip, kompiuterių kalbos sukurtos tam, kad galėtumėte bendrauti su kompiuteriais, panašiai kaip žmonių
+    kalbos išsivystė tam, kad
+    kad žmonės galėtų bendrauti vieni su kitais. Vis tik kompiuterių kalbomis parašytomis programomis programuotojai
+    dalijasi tarpusavyje ir jiems svarbu jas greitai suprasti.</p>
+<p>Komentarai - tai programuotojo pastabos, į kurias kompiuteris nekreipia dėmesio; jie skirti skaityti ir suprasti tik
+    žmonėms. Jie leidžia programuotojams rašyti programas, kurias lengviau suprasti kitiems žmonėms.</p>
+<p>Naudojant Pitono kalbą, komentarus galima rašyti dviem būdais:</p>
+<ul>
+    <li>Užrašant <code>#</code> ženklą prieš komentarą bet kurioje eilutėje.</li>
+    <li>Bet kokį tekstą (net jei jis užima daugiau nei vieną eilutę) įterpdami tarp trigubų kabučių, pavyzdžiui, <code>"""
+        ... """</code> arba <code>''' ... '''</code>.
+    </li>
+</ul>
+<p>Pirmiausia parašysiu paprastą programą be jokių komentarų, po to - antrą versiją su pridėtais komentarais ir trečią
+    versiją... šiek tiek mažiau
+    Tačiau visose trijose programose padarysiu tą pačią klaidą. Ar galite ją lengviau pastebėti pirmoje ar antroje
+    programoje?</p>
+<pre>
+pirmyn()
+pirmyn()
+suktis_kairėn()
+padėti()
+pirmyn()
+pirmyn()
+suktis_kairėn()
+padėti()
+pirmyn()
+suktis_kairėn()
+padėti()
+pirmyn()
+pirmyn()
+suktis_kairėn()
+padėti()
+</pre>
+<p>Palyginkite pirmiau pateiktą programą su ta pačia programa iš Robotuko požiūrio taško, bet su pridėtomis pastabomis
+    žmonėms; galėsite atpažinti
+    komentarus, nes jie pateikiami laikantis jau minėtų taisyklių.</p>
+<pre>
+&#39;&#39;&#39; Čia yra paprastos programos pavyzdys,
+kurioje Robotukas piešia kvadratą,
+kiekviename kampe palikdamas daiktą. &#39;&#39;&#39;
+
+pirmyn() # Pitono komandos rašomos atskirose eilutėse
+pirmyn()
+suktis_kairėn() # Robotukas moka suktis tik kairėn
+padėti() # priimame, kad Robotukas nešasi pakankamai daiktų
+
+# pakartojame dar 3 kartus, kad baigtume kvadratą
+pirmyn()
+pirmyn()
+suktis_kairėn()
+padėti()
+
+pirmyn()
+suktis_kairėn()
+padėti()
+
+pirmyn()
+pirmyn()
+suktis_kairėn()
+padėti()
+</pre>
+
+<p>Pateikti komentarai pastabos nėra itin geri, tačiau bent vienas iš jų turėjo padėti suprasti, kas programoje buvo
+    negerai. Galite manyti, kad čia mūsų apgaulė; tačiau kartais gali būti sudėtinga suprasti kodą be komentarų?
+    Komentarai, paaiškinantys ką tam tikras kodas turėtų daryti, gali būti labai naudingi ieškant klaidų.</p>
+<p>Atkreipkite dėmesį, kad, be komentarų, kai kuriems "loginiams" kodo blokams atskirti naudojau tuščias eilutes, kad
+    geriau matytųsi struktūra. Naudojant komentarus ir įterpiant tuščias eilutes galime padaryti programą lengviau
+    skaitoma.</p>
+
+<h2>Pabandyk!</h2>
+<p>Atidarykite <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%204" target="_blank">Robotuko
+    aplinkos</a> ketvirtą lygį.</p>
+<img alt="../_images/step4.png" src="_images/step4.png"/>
+<p>Naudodamiesi iki šiol išmoktomis funkcijomis, priverskite Reeborgą eiti žvyrkeliu, rinkti kiaulpienes ir mesti jas į
+    patogiai įrengtas šiukšliadėžes (pavaizduotas pilkos spalvos kiaulpienių paveikslėliais). Naudokite funkciją <code>pauzė</code>,
+    kad Robotukas palauktų kiekvienoje vietoje, kurioje randa kiaulpienę, kurią gali nuskinti. Būtinai naudokite
+    komentarus ir tuščias eilutes, kad sprendimas būtų lengviau skaitomas!</p>
+<p>Prisiminkite anksčiau aptartas funkcijas:</p>
+<ul>
+    <li><code>pirmyn()</code></li>
+    <li><code>suktis_kairėn()</code></li>
+    <li><code>paimti()</code></li>
+    <li><code>padėti()</code></li>
+    <li><code>pauzė()</code></li>
+</ul>
+
+<a href="Step3.html">Lygis 3: Pasisukimas į kairę ir žingsniavimas per kodą</a>
+<a href="Content.html">Turinys</a>
+<a href="Step5.html">Lygis 5: Naujų funkcijų sukūrimas</a>
+
+</body>
+</html>

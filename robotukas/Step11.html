@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lygis 11: If/Else</title>
+</head>
+<body>
+
+<h1>Lygis 11: If/Else</h1>
+
+<h2>Mokymosi medžiaga</h2>
+<p>Nors mokytis programuoti smagu, nereikėtų visą laiką praleisti prie kompiuterio. Būnant namuose, <code>jei</code>
+    lyja, toliau skaitykite, kitu atveju eikite į lauką žaisti!</p>
+<p>Perrašykime sakinį, prasidedantį <code>jei</code>, iš naujo:</p>
+<pre>
+jei lyja,
+    skaityk toliau,
+kitu atveju,
+    eik į lauką žaisti
+</pre>
+<p>Jei tai būtų Pitonas, kuris nesupranta lietuvių kalbos, reiktų užrašyti taip:</p>
+<pre>
+if lyja():
+    skaityk_toliau()
+else:,
+    eik_į_lauką_žaisti()
+</pre>
+
+<p>Taip, Pitonas suteikia daugiau nei vieno pasirinkimo galimybę, naudodamas raktažodį <code>else</code>. Pasinaudosime juo kitame pavyzdyje. Robotukas gali pamatyti, ar priešais jį yra siena, naudodamas funkciją <code>priekyje_laisva()</code>. Ją galima naudoti kartu su <code>if/else</code> ir parašyti programą, kuri vedžiotų Robotuką po stačiakampį pasaulį. Nepilnai suprogramuota programa pateikta toliau:</p>
+
+<pre>
+def eiti_arba_suktis():
+    if priekyje_laisva():
+        # atlikti veiksmus
+    else:
+        # atlikti kitokius veiksmus
+
+repeat 40:
+    eiti_arba_suktis()
+</pre>
+
+<h2>Pabandyk!</h2>
+<p>Atidaryk <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%2011" target="_blank">Robotuko pasaulio</a> 11 lygį.</p>
+    <img alt="Step 11" src="_images/step11.png"/>
+<p>Robotukas nori padaryti gėlių puokštes savo draugams Sofijai ir Andriui. Robotukui kaimynai leido <code>paimti()</code> tulpes iš savo kiemų. Robotuko nelaimei, kiekvienas kiemas yra skirtingas. Robotukas žino, kad kiekvienas kiemas bus stačiakampis, kiemą apeiti reikės 23 žingsnių, o kiekviename kiemo kampe bus po tulpę.
+</p>
+<p>Sukurkite programą, kuri vedžiotų Robotuką po kiemo perimetrą ir rinktų tuples (jei gali, paimtų tulpę, o jei negali, eitų į priekį). Jūs <strong>privalote</strong> naudoti <code>repeat 23:</code> ir <code>if/else</code>.</p>
+    <blockquote>
+        <p>Dėmesio</p>
+        <p>Šiame žingsnyje pasaulis bus skirtingas kiekvieną kartą, kai pradėsite vykdyti programą. Kiekvieną kartą paleidus kodą, bus nustatomi nauji pasaulio matmenys. Pradinė vieta visada bus apatiniame kairiajame pasaulio kampe.</p>
+    </blockquote>
+</div>
+<h2>Jei kyla sunkumų</h2>
+<p>Matėme, kad <code>def</code> ir <code>if</code> sakiniai gali būti laikomi (kartais) lygiaverčiais kodų bloko įterpimui; išimtis buvo tada, kai <code>if</code> sakinio sąlyga buvo <code>False</code>, tokiu atveju ignoruodavome kodų bloką, o tai prilygsta jo pašalinimui. <code>if/else</code> sakinius galima laikyti vieno ar kito kodo bloko įterpimu. Taigi</p>
+
+<pre>
+pirmyn()
+if True:
+    suktis_dešinėn()
+else:
+    suktis_kairėn()
+pirmyn()
+</pre>
+
+    <p>yra tas pats, kas</p>
+
+<pre>
+pirmyn()
+suktis_dešinėn()
+pirmyn()
+</pre>
+
+    <p>tuo tarpu kai</p>
+
+<pre>
+pirmyn()
+if False:
+    suktis_dešinėn()
+else:
+    suktis_kairėn()
+pirmyn()
+</pre>
+
+    <p>yra tas pats, kas</p>
+
+<pre>
+pirmyn()
+suktis_kairėn()
+pirmyn()
+</pre>
+
+<p>Tai iliustruoja ši diagrama:</p>
+<img width="300" alt="Diagrama 11" src="_images/diagrama11.png"/>
+<br />
+<a href="Step10.html">Lygis 10: Funkcijos ir kartojimas</a>
+<a href="Content.html">Turinys</a>
+<a href="Step12.html">Lygis 12: While</a>
+
+</body>
+</html>

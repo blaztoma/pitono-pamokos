@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lygis 8: Klauskite</title>
+</head>
+<body>
+
+<h1>Lygis 8: Klauskite</h1>
+
+<h2>Mokymosi medžiaga</h2>
+<p>Kartais iš anksto tiksliai nežinome, kaip atrodys pasaulis, su kuriuo susidurs Robotukas. Laimei, Robotukas gali
+    pajusti jį supantį pasaulį, o mes galime užduoti Robotukas klausimus apie jį. Norėdami užduoti klausimą, naudojame
+    <code>if</code> sakinį. Vadinamasis <code>if</code> <strong>sakinys</strong> yra šiek tiek panašus į
+    <code>funkcijos</code> apibrėžimą:</p>
+<blockquote>
+    <code>
+        def funkcijos_pavadinimas():
+            # kodo blokas
+    </code>
+</blockquote>
+
+<blockquote>
+    <code>
+        if kažkokia_sąlyga:
+            # kodo blokas
+    </code>
+</blockquote>
+
+<p class="first admonition-title">Dėmesio</p>
+<p>Bendras terminas, apibūdinantis funkciją, kuri duoda <code>True</code> arba <code>False</code> rezultatą
+    <code>if</code> sakinyje, yra <strong>sąlyga</strong>:</p>
+<pre>
+if sąlyga:
+    ...
+</pre>
+<p>Tai, kad galime patikrinti <code>True</code> arba <code>False</code>, nepadeda Robotukui sužinoti aplinkos sąlygas ir
+    priimti sprendimą. Dėl to yra specialios funkcijos, kurios leidžia Robotukui sužinoti aplinkos sąlygas ir priimti
+    sprendimus. Pirmoji iš jų yra <code>aptiktas_objektas()</code>, kuri praneša Robotukui, ar toje pozicijoje, kurioje
+    jis stovi, yra bent vienas objektas. Pavyzdžiui, jei norime paprašyti Robotuko surinkti objektus (pienes, morkas ir
+    t. t.), viena iš kodo dalių galėtų būti tokia: </p>
+<pre>
+if object_here():
+    take()
+</pre>
+<p>Toliau pateikiamas išsamus funkcijų (klausimų), į kuriuos Robotukas gali atsakyti, sąrašas:</p>
+<table border="1">
+    <colgroup>
+        <col width="11%"/>
+        <col width="89%"/>
+    </colgroup>
+    <thead valign="bottom">
+    <tr>
+        <th>Klausimas/Funkcija</th>
+        <th>Paaiškinimas</th>
+    </tr>
+    </thead>
+    <tbody valign="top">
+    <tr>
+        <td>prie_tikslo()</td>
+        <td>Grąžina True, jei Reeborgas yra ant tikslo langelio (vėliavos, namų arba žalios plytelės), priešingu atveju
+            - False.
+        </td>
+    </tr>
+    <tr>
+        <td>priekyje_laisva()</td>
+        <td>Grąžina True, jei priešais Robotuką nėra kliūties (sienos ir pan.), priešingu atveju - False.</td>
+    </tr>
+    <tr>
+        <td>dešinėje_laisva()</td>
+        <td>Grąžina True, jei į dešinę nuo Robotuko nėra jokios kliūties (sienos ir pan.), priešingu atveju - False.
+        </td>
+    </tr>
+    <tr>
+        <td>priekyje_siena()</td>
+        <td>Grąžina True, jei prieš Robotuką yra siena, priešingu atveju - False.</td>
+    </tr>
+    <tr>
+        <td>dešinėje_siena()</td>
+        <td>Grąžina True, jei dešinėje Robotuko pusėje yra siena, priešingu atveju - False.</td>
+    </tr>
+    <tr>
+        <td>aptiktas_objektas()</td>
+        <td>Grąžina True, jei objektas (žvaigždė, kiaulpienė ir t. t.) yra ten pat kur stovi Robotukas, priešingu atveju
+            - False.
+        </td>
+    </tr>
+    <tr>
+        <td>neša_objektą()</td>
+        <td>Grąžina True, jei Robotukas šiuo metu nešasi bent vieną objektą (žvaigždę, kiaulpienę ir t. t.). Grąžina
+            False, jei Robotukas nieko nesineša.
+        </td>
+    </tr>
+    <tr>
+        <td>pasisukęs_šiaurėn()</td>
+        <td>Grąžina True, jei Robotukas šiuo metu yra nukreiptas į šiaurę, priešingu atveju - False.</td>
+    </tr>
+    </tbody>
+</table>
+
+<p>Mokytojams
+<p>Funkcija <code>aptiktas_objektas()</code> grąžina objektų tipų, rastų tam tikroje vietoje, sąrašą. Pavyzdžiui, jei
+    toje pačioje vietoje yra žvaigždžių ir pienių, <code>aptiktas_objektas()</code> gali grąžinti <code>["žvaigždė",
+        "pienė"]</code> arba <code>["pienė", "žvaigždė"]</code>. Jei objekto toje vietoje nėra, grąžinamas tuščias
+    sąrašas. Kaip tikriausiai jau žinote, Pitonas <code>if</code> sakinyje tuščią sąrašą laiko lygiaverčiu
+    <code>False</code>, o ne tuščią sąrašą - lygiaverčiu <code>True</code>.</p>
+<p>Jei tam tikrame pasaulyje galima rasti daug objektų, o mus domina tik vienas objekto tipas, jį galime nurodyti kaip
+    funkcijos argumentą:</p>
+<pre>
+if aptiktas_objektas(&quot;pienė&quot;):
+    paimti(&quot;pienė&quot;)
+</pre>
+<code>aptiktas_objektas(&quot;pienė&quot;)</code> grąžins arba tuščią sąrašą, arba sąrašą su vienu elementu <code>[&quot;pienė&quot;]</code>.</p>
+
+<h2>Pabandyk!</h2>
+<p>Atidaryk 8 <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%208" target="_blank">Robotuko
+    aplinkos</a> lygį.</p>
+<img alt="_images/step8.png" src="_images/step8.png"/>
+<p>Robotuko draugė Rėja mėgsta skinti pienes ir pūsti jų sėklas kuo toliau. Dėl to Robotukas ieško ir skina kieme
+    augančias pienes. Tačiau pienės ne visada auga toje pačioje vietoje. Norėdami tuo įsitikinti, paspauskite atkūrimo
+    mygtuką 8 lygio pasaulyje ir atkreipkite dėmesį, kad pienės kaskart pasirodo skirtingose vietose. <em>Šalia pienė
+        paveiksliuko yra juodas klaustukas, kas parodo, jog pienių skaičius iš anksto nėra žinomas.</em></p>
+<p>Sukurkite programą, kuri vedžioja Robotuką po kiemą ir, kai tik randa pienę, ją paima. Pienė gali būti bet kurioje
+    vietoje, kurioje yra pienės paveikslėlis su klausimo ženklu apačioje (jį dar kartą pamatysite, jei paspausite
+    perkrovimo mygtuką). Robotukui judant po kiemą reikės tikrinti ar esamoje vietoje aptinkamas daiktas. Kai bus
+    surinktos visos pienės, liepkite Robotukui padėti visas pienes, kurias jis surinko ties pozicija (2,3), tada
+    grįžkite prie vėliavos (1,3). Nepamirškite naudoti komentarų, kad sprendimas būtų lengviau skaitomas!</p>
+<h2>Jei kyla sunkumų (išsamesnis paaiškinimas)</h2>
+<pre>
+if True:
+    pirmyn()
+
+if False:
+    suktis_kairėn()
+</pre>
+<p>Aukščiau pateiktame kode <code>if</code>, <code>True</code> ir <code>False</code> yra Pitono raktažodžiai. Pravartu
+    pirmiau pateiktą kodą išbandyti Robotuko pasaulyje (galite naudoti bet kurį jums patinkantį pasaulį). Taip pat
+    galite sukeisti vietomis True ir False, tada dar kartą paleisti programą ir pažiūrėti, kas nutiks.</p>
+<p>Kai pasakojome apie funkcijas, paaiškinome, kad apie funkcijos <strong>iškvietimą</strong> galime galvoti kaip apie
+    funkcijoje esančio kodo bloko įterpimą toje programos vietoje kur kviečiama funkcija. Taigi:</p>
+<pre>
+pirmyn()
+suktis_dešinėn()  # funkcijos iškvietimas
+pirmyn()
+</pre>
+<p>yra tolygu:</p>
+<pre>
+pirmyn()
+# kodo bloko, esančio turn_right() viduje, pradžia
+suktis_kairėn()
+suktis_kairėn()
+suktis_kairėn()
+# kodo bloko pabaiga
+pirmyn()
+</pre>
+<p>Apie <code>if</span></code> sakinius irgi galime panašiai galvoti, išskyrus tai, kad turime <em>sąlyginį</em>
+    įterpimą (arba <strong>šalinimą</strong>!). Taigi:</p>
+<pre>
+pirmyn()
+if True:
+    suktis_kairėn()
+    suktis_kairėn()
+    pirmyn()
+</pre>
+<p>yra tas pat kas:</p>
+<pre>
+pirmyn()
+suktis_kairėn()
+suktis_kairėn()
+pirmyn()
+</pre>
+<p>kai:</p>
+<pre>
+pirmyn()
+if False:
+    suktis_kairėn()
+    suktis_kairėn()
+    pirmyn()
+</pre>
+<p>yra tas pats kas:</p>
+<pre>
+pirmyn()
+pirmyn()
+</pre>
+<p>Atkreipkite dėmesį, kad toks mąstymas nereiškia, jog toks šalinimas būtų atliktas visam laikui: jei mūsų programa
+    kokiu nors būdu grįžtų atgal ir vėl pakartotų šią kodo dalį, <code>if</code> sąlyga kiekvieną kartą būtų vertinama
+    iš naujo, nusprendžiant, ar vykdyti kodo bloko viduje esančias eilutes.</p>
+<p>Pavaizduosime tai naudodami diagramą:</p>
+<img width="300" alt="_images/diagrama8.png" src="_images/diagrama8.png"/><br/>
+
+<a href="Step7.html">Lygis 7: Galvojimas ir gimtadienio žinutė</a>
+<a href="Content.html">Turinys</a>
+<a href="Step9.html">Lygis 9: Instrukcijų kartojimas</a>
+
+</body>
+</html>

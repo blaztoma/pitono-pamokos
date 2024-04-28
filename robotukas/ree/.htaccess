@@ -1,0 +1,9 @@
+# Prevent server from executing Python scripts
+<FilesMatch "\.py$">
+    SetHandler None
+</FilesMatch>
+
+# Force .py files to be served as plain text
+<FilesMatch "\.py$">
+    AddType text/plain .py
+</FilesMatch>

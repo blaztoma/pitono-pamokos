@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Lygis 3: Pasisukimas į kairę ir žingsniavimas per kodą</title>
+</head>
+<body>
+
+<h1>Lygis 3: Pasisukimas į kairę ir žingsniavimas per kodą</h1>
+<h2>Mokymosi medžiaga</h2>
+<h3>Robotuko klaidos</h3>
+<p>Kompiuterių žargonu, klaida - tai klaida, dėl kurios programa elgiasi netikėtai. Jei rašote kompiuterių programas,
+    anksčiau ar vėliau jose atsiras klaidų - taip būna visiems. Geri programuotojai stengiasi "pašalinti" klaidas arba
+    jas ištaisyti, kai tik pastebi, kad jų programa elgiasi netikėtai.</p>
+<p>Ne tokie geri programuotojai teigia, kad "klaidos" iš tikrųjų nėra klaidos, bet kad jos yra jų kurtų programų
+    "savybės". <strong>Jūs</strong> ketinate tapti geru programuotoju, skirtingai nei Robotuko kūrėjas, kurio programoje
+    gausu klaidų. Kai kurios Robotuko problemos yra šios:</p>
+<ol class="arabic simple">
+    <li><p>Robotukui pasireiškė alyvos nuotėkis. Alyvos nuotėkis kenkia aplinkai ir tai nepatogu Robotukui, kuris turi
+        papildyti savo atsargas, kai kai jis nėra užimtas užduočių vykdymu. Robotuko gamintojas teigia, kad tai yra
+        savybė, nes leidžia sekti Reeborgo kelią, taip kaip programuotojai gali "sekti" programą.</p></li>
+    <li><p>Robotuko vairavimo mechanizmas nėra pakankamai geras: jis gali sukti tik į kairę. Robotuko kūrėjas tvirtina,
+        kad tai yra programos savybė, nes ji suteikia jums galimybę sužinoti apie <strong>funkcijas</strong>. Netrukus
+        sužinosite, kaip užprogramuoti sukimą į dešinę, nors ir neekonomiškai.</p></li>
+    <li><p>Robotukas turi kompasą, kuris leidžia nustatyti, kuria kryptimi Robotukas yra nukreiptas. Deja, programa
+        leidžianti Robotukui gauti informaciją iš kompaso, turi klaidą: ji tik pasako Robotukui ar jis nukreiptas į
+        šiaurę... ar ne. Visa laimė, kad to pakanka sužinoti pasisukimą kitomis kryptimis.</p></li>
+    <li><p>Robotukas gali matyti, ar priešais jį yra siena, taip pat gali pasukti galvą į dešinę, kad pamatytų, ar ten
+        yra siena. Tačiau
+        programinė įranga neleidžia Robotuko programai tinkamai užregistruoti sienos, kai jis pasuka galvą į kairę.</p>
+    </li>
+</ol>
+<h3>Žingsniavimas per kodą</h3>
+<p>Kartais, norint rasti klaidų priežastį, gali būti naudinga nutraukti įprastą programos eigą. Šiuo tikslu galite
+    atlikti šiuos veiksmus:</p>
+<ol class="arabic">
+    <li><p>Vykdomą programą galite <em>pristabdyti</em> paspausdami <strong>pauzės</strong> mygtuką. Tai panašu į tai,
+        ką žmonės vadina <em>pertraukimo taško</em> nustatymu kompiuterio programoje.</p>
+        <p><img alt="pauseButton" src="_images/pause_button.png"/></p>
+    </li>
+    <li><p>Užuot spaudę klaviatūroje pauzės mygtuką, bet kurioje programos vietoje galite įvesti instrukciją <code>pauzė()</span></code>,
+        ir Robotukas padarys pauzę, laukdamas jūsų leidimo tęsti darbą.</p></li>
+    <li><p>Per programą galite <em>žingsniuoti</em> po vieną instrukciją paspausdami <strong>žingsnio</strong> mygtuką.
+        Pagal numatytuosius nustatymus eilutė, kurią ketinama vykdyti, yra paryškinama; paryškinimą galite išjungti
+        paspaudę virš kodo redaktoriaus esantį mygtuką.</p>
+        <p><img alt="stepButton" src="_images/step_button.png"/></p>
+    </li>
+    <li><p>Programą galite sustabdyti bet kuriuo metu paspausdami mygtuką <strong>stop</strong>; deja, tai gali
+        neveikti, jei sukursite
+        vadinamąją begalinę kilpą, kurios Robotukas nekontroliuoja. Blogiausiu atveju visada galite tiesiog iš naujo
+        perkrauti tinklalapį.</p>
+        <p><img alt="stopButton" src="_images/stop_button.png"/></p>
+    </li>
+</ol>
+<h2>Pabandyk!</h2>
+<p>Atsidaryk trečiajį <a
+        href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%203"
+        target="_blank">Robotuko aplinkos</a> lygį.</p>
+<p>Kaip minėta, Robotukas gali sukti tik viena kryptimi - į kairę. Norėdami liepti Robotukui pasukti, galite naudoti
+    funkciją <code>suktis_kairėn()</code>.</p>
+<img alt="../_images/step3.gif" src="_images/step3.gif"/>
+<p>Naudokite <code>pirmyn()</span></code> ir <code>suktis_kairėn()</code> funkcijas tam, kad apvesti Robotuką aplink
+    ežerą.</p>
+<blockquote>
+    <p>Pamėgink!</p>
+    <p>Norėdami pamatyti, kas atsitiks, padarykime keletą dalykų neteisingai. Pavyzdžiui, priverskite Robotuką įbristi į
+        ežerą. Taip pamatysite, koks bus klaidos pranešimas ir žinosite kaip elgtis, kai klaidas darysite netyčia.</p>
+</blockquote>
+<a href="Step2.html">Lygis 2: Daiktų paėmimas ir padėjimas</a>
+<a href="Content.html">Turinys</a>
+<a href="Step4.html">Lygis 4: Komentavimas</a>
+</body>
+</html>

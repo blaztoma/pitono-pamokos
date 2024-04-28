@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lygis 12: While</title>
+  </head>
+  <body>
+
+<h1>Lygis 12: While</h1>
+<h2>Mokymosi medžiaga</h2>
+<p>Kai norime pakartoti veiksmus, kol bus įvykdyta tam tikra sąlyga, Pitonas leidžia tai padaryti naudojant naują raktažodį: <code>while</code>. Tarkime, norime, kad Robotukas eitų tol, kol pasieks sieną. Anksčiau galėjome tai padaryti tokiu būdu: </p>
+<pre>
+def eik_iki_sienos():
+    if priekyje_laisva():
+        pirmyn()
+
+repeat 42:
+    eik_iki_sienos()
+</pre>
+
+<p>Tuo pačiu, turėjome tikėtis, kad 42 žingsnių pakaks kelionei iki sienos. Naudojant <code>while</span></code>, galime šią programą sutrumpinti:</p>
+<pre>
+while priekyje_laisva():
+    pirmyn()
+</pre>
+
+<p>Tai ir viskas! Nereikia jokių mėginimų atspėti konkretų žingsnių skaičių. Šiuo atveju, Robotukas eis tol, kol pasieks sieną, net jei ji būtų už 1000 žingsnių.</p>
+<p>Ši diagrama iliustruoja mūsų paprastą programą:</p>
+<img alt="Diagrama 12" width="300" src="_images/diagrama12.png" />
+
+<h2>Pabandyk!</h2>
+<p>Atidaryk <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%2012" target="_blank">Robotuko pasaulio</a> 12 lygį.</p>
+<img alt="Step 12" src="_images/step12.png" />
+<p>Vienas iš Robotuko namų ruošos darbų - išnešti atliekas. Kiekvieną kartą šiukšlių kibire susikaupia vis kitoks jų kiekis.</p>
+<p>Sukurkite programą, pagal kurią Robotukas išneštų atliekas, o tada grįžtų į namus. Robotukas turi paimti tiek supuvusių obuolių, kiek jų yra kibire, nunešti juos į šiukšlių konteinerį lauke, tada grįžti į poziciją (7, 8). Sprendime turėsite naudoti <code>while</code> ciklus.</p>
+
+<h2>Jei kyla sunkumų</h2>
+<p>Tarkime, turime tokį kodą:</p>
+<pre>
+while sąlyga():
+    daryk_1()
+    daryk_2()
+    daryk_3()
+</pre>
+<p>Tai būtų tas pats, kas:</p>
+<pre>
+if sąlyga():
+    daryk_1()
+    daryk_2()
+    daryk_3()
+if sąlyga():
+    daryk_1()
+    daryk_2()
+    daryk_3()
+if sąlyga():
+    daryk_1()
+    daryk_2()
+    daryk_3()
+if sąlyga():
+    daryk_1()
+    daryk_2()
+    daryk_3()
+....
+</pre>
+
+<p>Matote, kad mes be reikalo atkartojame programoje tą patį kodo bloką. Tai yra blogai.</p>
+<p>Vietoj to, kad programoje rašyti daugybę besikartojančio kodo, programuotojai naudoja taip vadinamus <strong>ciklus</strong>: tai reiškia, kad pradedama nuo pirmosios instrukcijos (<code>daryk_1()</code>) kodo bloko viduje, tęsiama su visomis kitomis, kol pasiekiama paskutinė instrukcija (<code>daryk_3()</code>), tada <strong>*ciklas užsisuka*</strong>, arba grįžtama atgal, prie sąlygos patikrinimo prieš pat bloko pradžią ir žiūrima, ar tenkinama sąlyga; jei taip (True), ciklas kartojamas dar kartą. Jei ne (False) - išeinama iš ciklo ir vykdomos toliau esančios operacijos. Programa turi būti parašyta taip, kad kažkuriuo momentu sąlyga nebūtų tenkinama, kitu atveju gausim *amžiną ciklą*, kuris nesustos tol kol bus nutraukta programa.</p>
+
+<a href="Step11.html">Lygis 11: If/Else</a>
+<a href="Content.html">Turinys</a>
+<a href="Step13.html">Lygis 13: If/Elif/Else</a>
+
+  </body>
+</html>

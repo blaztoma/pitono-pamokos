@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lygis 0: Robotuko eksperimentai</title>
+</head>
+<body>
+<h1>Lygis 0: Robotuko eksperimentai</h1>
+<p>Tyrinėkite Robotuko aplinką ir pagrindines Robotuko komandas.</p>
+<h2>Įžanga</h2>
+<p>Nors naudojant aplinkas, tokias kaip Scratch, galima daug ko išmokti, kažkada reikės pereiti prie tradicinės
+    programavimo kalbos. Šiame kurse naudosime <a href="https://www.python.org/">Pitono</a> programavimo kalbą. Vis tik,
+    prieš pradedant rimtai dirbti su Pitonu aplinka, pasismaginsime Robotuko aplinkoje. Naudodami Robotuką, išmoksime
+    rašyti Pitono komandas. Rašydami kodą jūs be abejonės darysite sintaksės ir logikos klaidas (kompiuteris nesupras
+    arba veiks ne taip kaip reikia), bet būtent tai ir leis jums įsisavinti tekstinį programvimą. Taigi, nenusiminkite
+    jei tų klaidų bus daug ir kartais nesiseks jų taisyti.</p>
+<h2>Robotuko pirmasis žingsnis</h2>
+<p>Atidarykite <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%200&url=worlds%2Fsk_lt%2Fstep0.json" target="_blank">Robotuko
+    aplinką</a>. Jei iškart neatidarys 0 žingsnio pasaulio, pasirinkite jį pasaulių meniu:</p>
+<img alt="../_images/step0.png" width="500px" src="_images/step0.png"/>
+<p>Dabar turėtumėte matyti Robotuką - vienišą tuščiame pasaulyje. Deja, Robotukas yra paprastas robotas, todėl jis gali
+    atlikti tik keletą pagrindinių komandų. Vienas dalykas, kurį Robotukas gali padaryti, tai judėti į priekį, kaip
+    nurodyta:</p>
+<img alt="../_images/move.png" width="200" src="_images/move.png"/>
+<br>
+<img alt="../_images/move_one_step.gif" src="_images/move_one_step.gif"/>
+<p>Redaktoriaus skydelyje yra viena instrukcija:</p>
+<blockquote><code>pirmyn()</code></blockquote>
+<p><code>pirmyn()</code> yra Pitono <strong>funkcijos</strong> pavyzdys. Funkcija turi pavadinimą; šiuo atveju, tai yra
+    <code>pirmyn</code>. Galiojantys pavadinimai prasideda raide arba pabraukimo ženklu “_” ir gali būti sudaryti iš
+    raidžių, skaičių arba pabraukimo ženklo “_”. Funkcijos pavadinimą seka <code>()</code>. Tai pasako Robotukui, kad
+    funkcija turi būti <em>įvykdyta</em> arba <em>iškviesta</em> (du sinonimai). Ši funkcija turi būti naujoje eilutėje.
+    [Vėliau panagrinėsime šios taisyklės išimtis.]</p>
+<p>Kartais mes kursime <strong>algoritmų schemas</strong>, kurios grafiškai vaizduoja programą. Algoritmą, kuriame yra
+    viena instrukcija <code>pirmyn()</code>, galime vaizduoti taip:</p>
+<img width="150" alt="../_images/move1.jpg" src="_images/diagrama00.png"/>
+<p>Visa programa, turinti šią vieną instrukciją, būtų atvaizduojama taip:</p>
+<img width="150" alt="../_images/move.jpg" src="_images/diagrama01.png"/>
+<p>Algoritmo schemoje instrukcijų seką nurodo rodyklės, kurios prasideda nuo “Pradžia” mazgo ir baigiasi mazge
+    “Pabaiga”.</p>
+<blockquote>
+    <p>Pabandykite!</p>
+    <p>Pridėkite antrą <code>pirmyn()</code> instrukciją, kad Robotukas žengtų du žingsnius vietoj vieno.</p>
+</blockquote>
+<blockquote>
+    <p>Patarimas</p>
+    <p>Kiekviena instrukcija turi būti naujoje eilutėje, be papildomų tarpų eilutės pradžioje.</p>
+</blockquote>
+<h2>Trrrriktys ir klaidos¶</a></h2>
+<p>Kuriant kompiuterines programas, tikėtina, kad padarysite daug klaidų. Norėdami pamatyti, kaip Robotukas reaguoja į
+    kai kurias klaidas, paprašysiu jus tyčia padaryti klaidą programoje.</p>
+<blockquote>
+    <p>Pabandykite!</p>
+    <p>Pakeiskite <code>pirmyn()</code> į <code>Pirmyn()</code> (su didžiąja P) ir bandykite vykdyti programą.</p>
+</blockquote>
+<p>Pitono kalba, kurią supranta Robotukas, yra tokia, kuriai svarbus raidžių dydis; tai reiškia, kad mažosios ir
+    didžiosios raidės turi skirtingas reikšmes. Dabar, kai matote, kaip Robotukas susidoroja su klaidomis, pataisykite
+    programą ir paleiskite taisyklingą programą.</p>
+<h2>Specialus klaviatūros įrankis</h2>
+<p>Pačiame Robotuko pasaulio viršuje rasite mygtuką pavadinimu <strong>Robotuko klaviatūra</strong>. Jei spustelėsite
+    jį, pasirodys speciali klaviatūra. Spustelėjus kiekvieną mygtuką, atitinkama instrukcija, Pitono raktažodis ir pan.,
+    bus automatiškai įterpta į redaktorių. Tai gali būti naudinga užtikrinant, kad pavadinimai būtų teisingai užrašyti
+    ir kad būtini skliausteliai nebūtų pamiršti.</p>
+<h2>Tolesni žingsniai</h2>
+<p>Kituose puslapiuose jums bus pateikti iššūkiai, kuriuos turėsite įveikti. Nors juos galite atlikti bet kokia tvarka,
+    tačiau pateikta tvarka logiškai atskleidžia Robotuko galimybes. Kai baigsite žingsnį, būtų gerai parodyti savo
+    sprendimą mokytojui, užsitikrinant, jog sukūrėte tinkamą sprendimą. Nors pasauliai sukurti taip, kad parodytų jums
+    ar jūsų sprendimas teisingas, vis tik labai naudinga, kai patyręs žmogus duoda patarimų!</p>
+<h2>Padėka</h2>
+<p>Robotukas yra šiuolaikinė aplinkos, vadinamos <em>Reeborg World</em> adaptacija. Ją sukūrė André Roberge. Savo
+    ruožtu, <em>Reeborg World</em> yra programos, vadinamos Karel the Robot, kurią sukūrė Richard Pattis Stanfordo
+    universitete 1981 m., adaptacija. Versiją, kurią naudosime, adaptavo Tomas Blažauskas. Jūs naudosite pamokas, kurios
+    yra André Roberge, Roger Frank, Jeffrey Elkner, André Roberge ir Dan Schellenberg sukurtų pamokų adaptacija lietuvių
+    kalbai.</p>
+<a href="Content.html">Turinys</a>
+<a href="Step1.html">Lygis 1: Parvesk Robotuką namo ir išsaugok savo darbą</a>
+</body>
+</html>

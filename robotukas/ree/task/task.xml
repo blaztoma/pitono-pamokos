@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="task_20164179">
+    <course>Pitono pamokėlės</course>
+    <title>Nutriušusi eglutė</title>
+    <short>Nutriušusi eglutė</short>
+    <description><![CDATA[<p>Parašykite programą, kuri įvedus eglutės ilgį atspausdintų vieną jos pusę. Spausdinimui panaudokite ciklą cikle (galima ir kitaip išspręsti).</p>]]></description>
+    <example><![CDATA[<p><strong>Įvestis</strong>:</p><p>5</p><p><strong>Išvestis</strong>:</p><p>*<br>**<br>***<br>****<br>*****</p>]]></example>
+    <skeleton><![CDATA[# Toliau rašykite kodą...
+]]></skeleton>
+    <drops><![CDATA[]]></drops>
+    <language>lt</language>
+    <menu_position>top</menu_position>
+    <author>Tomas Blažauskas</author>
+    <score>60</score>
+    <show_title>1</show_title>
+    <show_description>1</show_description>
+    <show_examples>1</show_examples>
+    <show_icons>0</show_icons>
+    <small_icons>0</small_icons>
+    <use_drops>0</use_drops>
+    <use_hints>0</use_hints>
+    <use_ai>1</use_ai>
+    <use_explanations>1</use_explanations>
+    <use_corrections>1</use_corrections>
+    <use_reviews>1</use_reviews>
+    <hints>
+        
+    </hints>
+    <show_tests>1</show_tests>
+    <show_files>0</show_files>
+    <files>
+        
+    </files>
+    <button_new>0</button_new>
+    <button_run>1</button_run>
+    <button_assess>1</button_assess>
+    <button_stop>1</button_stop>
+    <button_clear>1</button_clear>
+    <button_upload>0</button_upload>
+    <button_download>0</button_download>
+</task>

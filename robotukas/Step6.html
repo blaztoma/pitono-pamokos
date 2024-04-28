@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lygis 6: Funkcijų saugojimas bibliotekoje</title>
+</head>
+<body>
+
+<h1>Lygis 6: Funkcijų saugojimas bibliotekoje</h1>
+<h2>Mokymosi medžiaga</h2>
+<p>Be to, kad dabar galite pasukti Robotuką į dešiną, jums <em>gali</em> praversti apsisukimo operacija; pavyzdžiui, jei
+    einate į priekį, jums gali prireikti apsisukti tam, kad grįžtumėte atgal. Sukursime funkciją
+    <code>suktis_aplink()</code>:</p>
+<pre>
+def suktis_aplink():
+    suktis_kairėn()
+    suktis_kairėn()
+</pre>
+<p>Kai programuotojas naudoja tam tikrą funkciją skirtingose programose, užuot iš naujo apibrėžęs ją kiekvienoje
+    rašomoje programoje, jis įrašo ją į <strong>bibliotekomis</strong> taip, kad kitos jo programos galėtų naudoti
+    bibliotekoje esančias funkcijas.</p>
+<p>Funkciją <code>suktis_dešinėn()</code> naudosite <strong>daug kartų!</strong> Užuot kiekvieną kartą ją perrašinėję
+    <strong>Pitono kodas</strong> kortelėje, paspauskite kortelę <strong>biblioteka</strong> ir rašykite ten. Beje,
+    <code>suktis_aplink()</code> taip pat turėtų būti parašyta ten.</p>
+<img alt="../_images/library.png" width="350" src="_images/library.png"/>
+<p>Tada, kai norėsite naudoti bibliotekoje apibrėžtas funkcijas, tiesiog rašykite <code>from library import</code> (po
+    to įrašykite funkcijų pavadinimus, atskirtus vienas nuo kito kableliais) Pitono kodo redaktoriuje. Pavyzdžiui, jei
+    bibliotekoje apibrėžėte <code>suktis_dešinėn()</code>, galite įvesti <code>from library import suktis_dešinėn</code>
+    ir dabar galėsite naudoti <code>suktis_dešinėn()</code> funkciją bet kurioje kodo vietoje.</p>
+<p>Jei bibliotekoje išsaugosite daug funkcijų, galite naudoti <code>from library import *</code>, kad importuotumėte
+    <strong>visas</strong> bibliotekos funkcijas. Ženklas <code>*</code> vadinamas pakaitiniu ženklu ir šiuo atveju
+    nurodo importuoti visas funkcijas, kurias jis gali rasti bibliotekoje.</p>
+<blockquote>
+    <p>Dėmesio!</p>
+    <p>Tyrinėdami Robotuko pasaulius naudojame komandą <code>from library import</code>, kuri leidžia tiesiog naudoti
+        <code>suktis_dešinėn()</code>. Vėliau kurso metu pereisime prie komandos <code>import library</code> naudojimo,
+        todėl norint naudoti šią funkciją turėsite įvesti <code>library.suktis_dešinėn()</code>.</p>
+</blockquote>
+<h2>Pabandyk!</h2>
+<p>Atsidarykite <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%206" target="_blank">Robotuko
+    aplinkos</a>.</p>
+<img alt="../_images/step6.png" src="_images/step6.png" 6 lygį./>
+<p>Robotukui reikia nueiti pasiimti laikraštį ("Fenikso <strong>žvaigždė</strong>"), kuris yra prie namų. Jei dar to
+    nepadarėte, bibliotekos skirtuke apibrėžkite abi funkcijas <code>suktis_dešinėn()</code> ir
+    <code>suktis_aplink()</code>. Dabar naudokite bibliotekoje apibrėžtas funkcijas, kad Robotukas paimtų laikraštį,
+    grįžtų atgal į namą ir padėtų laikraštį ant žemės. Beje, nepamirškite naudoti komentarų ir tuščių eilučių, kad jūsų
+    sprendimas būtų lengviau skaitomas!</p>
+
+<a href="Step5.html">Lygis 5: Naujų funkcijų sukūrimas</a>
+<a href="Content.html">Turinys</a>
+<a href="Step7.html">Lygis 7: Galvojimas ir gimtadienio žinutė</a>
+
+</body>
+</html>

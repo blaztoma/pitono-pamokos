@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tests>
+ <test id="test_1">
+  <console>
+   <input visible="1"><![CDATA[5]]></input>
+   <output visible="1"><![CDATA[*
+**
+***
+****
+*****]]></output>
+  </console>
+  <files/>
+ </test>
+ <test id="test_2">
+  <console>
+   <input visible="1"><![CDATA[1]]></input>
+   <output visible="1"><![CDATA[*]]></output>
+  </console>
+  <files/>
+ </test>
+ <test id="test_3">
+  <console>
+   <input visible="1"><![CDATA[2]]></input>
+   <output visible="1"><![CDATA[*
+**]]></output>
+  </console>
+  <files/>
+ </test>
+ <test id="test_4">
+  <console>
+   <input visible="1"><![CDATA[0]]></input>
+   <output visible="1"><![CDATA[]]></output>
+  </console>
+  <files/>
+ </test>
+ <test id="test_5">
+  <console>
+   <input visible="1"><![CDATA[3]]></input>
+   <output visible="1"><![CDATA[*
+**
+***]]></output>
+  </console>
+  <files/>
+ </test>
+ <test id="test_6">
+  <console>
+   <input visible="1"><![CDATA[4]]></input>
+   <output visible="1"><![CDATA[*
+**
+***
+****]]></output>
+  </console>
+  <files/>
+ </test>
+</tests>

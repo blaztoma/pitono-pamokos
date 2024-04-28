@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <title>Lygis 5: Naujų funkcijų sukūrimas</title>
+</head>
+<body>
+
+<h1>Lygis 5: Naujų funkcijų sukūrimas</h1>
+<h2>Mokymosi medžiaga</h2>
+<p>Atlikę paskutinį lygį supratote, jei Rėborgas atliks tris posūkius į kairę iš eilės, galutinis rezultatas bus toks
+    pat, kaip ir atlikus vieną posūkį į dešinę. Tikriausiai tapo gana nuobodu rašyti tris <code>suktis_kairėn()</code>
+    instrukcijas kiekvieną kartą, kai norėjote, kad Reeborgas pasuktų į dešinę. Argi nebūtų maloniau, jei galėtumėte
+    tiesiog parašyti <code>suktis_dešinėn()</code>?</p>
+<p>Kaip galime iškviesti tokias integruotas funkcijas kaip <code>suktis_kairėn()</code> ir <code>pirmyn()</code>, taip
+    pat galime sukurti savo funkcijas. Naują Pitono funkciją galime apibrėžti taip:</p>
+<blockquote>
+  <pre>
+def geras_funkcijos_pavadinimas():
+    # kelios kodo eilutės
+    # atitrauktos nuo krašto, kad būtų def viduje
+  </pre>
+</blockquote>
+
+<p><code>def</code> - tai pirmas sutiktas Pitono <strong>raktažodis</strong>. Raktažodžiai - tai žodžiai, kurie
+    programavimo kalbose turi ypatingą reikšmę. Atkreipkite dėmesį, kad dvitaškis <code>:</code> rašomas prieš
+    vadinamąjį <em>kodo bloką</em>, o po jo einanti išskirta dalis yra funkcijos <em>kūnas</em>. Pitone <strong>reikalaujama</strong>
+    tokius kodo blokus <em>išskirti</em> kiekvienos eilutės pradžioje paliekant vienodą tarpų skaičių. Tai leidžia
+    žmogui lengviau identifikuoti funkcijos kūną.</p>
+<p>Parašykime pirmą Pitono funkciją:</p>
+<pre>
+def suktis_dešinėn():
+    suktis_kairėn()
+    suktis_kairėn()
+    suktis_kairėn()
+</pre>
+<p>Štai ir viskas! Dabar jums nereikės rašyti trijų <code>suktis_kairėn()</code> eilučių iš eilės, kad imituotumėte
+    posūkį į dešinę!</p>
+<h3>Kaip suprasti <code>def</code></h3>
+<blockquote>
+    <p>Dėmesio!</p>
+    <p>Atkreipkite dėmesį, kad šiame supaprastintame paaiškinime neatsižvelgiama į vadinamąją kintamųjų sritį, kurią
+        aptarsime vėliau.</p>
+</blockquote>
+<p>Ką tik pamatėte, kaip sukurti funkciją Pitone. Tikėtina, kad iš karto supratote, kaip jos veikia. Čia pateikiame
+    išsamesnį paaiškinimą, kuris padės jums ne tik suprasti, kaip veikia funkcijos, bet ir kitos Pitono konstrukcijos,
+    kurios apima kodo blokus.</p>
+<p>Tarkime, turime tokį kodą:</p>
+<pre>
+def suktis_dešinėn():   # kodo bloko pradžia
+    suktis_kairėn()
+    suktis_kairėn()
+    suktis_kairėn()       # kodo bloko pabaiga
+
+pirmyn()
+suktis_dešinėn()
+pirmyn()
+</pre>
+
+<p>Tai yra tas pats, kas:</p>
+<pre>
+def suktis_dešinėn():   # kodo bloko pradžia
+    suktis_kairėn()
+    suktis_kairėn()
+    suktis_kairėn()       # kodo bloko pabaiga
+
+pirmyn()
+# suktis_dešinėn() pakeičiama šiomis funkcijos komandomis
+suktis_kairėn()
+suktis_kairėn()
+suktis_kairėn()
+pirmyn()
+</pre>
+
+<p>Kitaip tariant, <code>def</code> nusako vardą, kurį galime naudoti kaip sinonimą visam kodo bloko viduje esančiam
+    kodui, ir kiekvieną kartą, kai matome, kad sinonimas yra <strong>įvardijamas</strong> [t. y. kai po vardo rašoma
+    <code>()</span></code>], galime manyti, kad tai yra lygiavertiška toje vietoje įterptam kodo blokui (kaip parodyta
+    pavyzdyje).</p>
+
+<h2>Pabandyk!</h2>
+<p>Atidaryk <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%205" target="_blank">Robotuko
+    aplinkos</a> penktą lygį.</p>
+<img alt="../_images/step5.png" src="_images/step5.png"/>
+<p>Robotukas savo sode nori nusiskinti braškių. Robotuko sodas yra labai keistos formos, kaip matėte aukščiau.
+    Apibrėžkite funkciją <code>nuskinti_dvi_braškes()</code>, kuri paima dvi braškes ir padeda jas ant žemės. Naudokite
+    ją keturis kartus kaip sprendimo dalį. Kaip visada, nepamirškite naudoti komentarų tuščių eilučių, kad padidintumėte
+    savo sprendimo skaitomumą!</p>
+
+<a href="Step4.html">Lygis 4: Komentavimas</a>
+<a href="Content.html">Turinys</a>
+<a href="Step6.html">Lygis 6: Funkcijų saugojimas bibliotekoje</a>
+</body>
+</html>

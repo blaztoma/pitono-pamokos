@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lygis 14: Raktažodis not (ne)</title>
+  </head>
+  <body>
+
+<h1>Lygis 14: Raktažodis not (ne)</h1>
+<h2>Pamoka</h2>
+<p>Pitono programoje galime nurodyti, kad kažkas yra priešingai nei šiuo metu yra. Pavyzdžiui, jei rašome <code>not True</code> - tai yra tas pats, kas <code>False</code>. Panašiai <code>not False</code> atitinka <code>True</code>.</p>
+<p>Kai perėjote 10 lygį, sukūrėte programą, kuri parodo Robotukui kaip peršokti kliūtis.</p>
+<img alt="../_images/hurdles2.png" src="_images/hurdles2.png" />
+<p>Savo sprendime, skirtame paminėtam pasauliui, galėjote sukurti funkciją, panašią į šią:</p>
+<pre>
+def eiti_šokti_arba_baigti():
+    if prie_tikslo():
+        # kodas
+    elif priekyje_laisva():
+        # kodas
+    else:
+        # kodas
+</pre>
+
+<p>Šį programos fragmentą galima perrašyti, pasirinkus skirtingus neigimo raktažodžio <code>not</code> <strong>ir</strong> skirtingus <code>if/elif/else</code> derinius.</p>
+<p>Nagrinėkite tris toliau pateiktus kodo pavyzdžius, atkreipdami dėmesį į tai, kur panaudotas <code>not</code> raktažodis <strong>ir</strong> kas įtraukta į kiekvieną kodo bloką.</p>
+<pre>
+# pirmasis variantas:
+def eiti_šokti_arba_baigti():
+    if prie_tikslo():
+        # kodas
+    elif not priekyje_laisva():
+        # kodas
+    else:
+        # kodas
+
+# antrasis variantas ... sudėtingiau
+def eiti_šokti_arba_baigti():
+    if not at_goal():
+        if front_is_clear():
+            # kodas
+        else:
+            # kodas
+    else:
+        # kodas
+
+# trečiasis variantas
+def eiti_šokti_arba_baigti():
+    if not at_goal():
+        if not front_is_clear():
+            # kodas
+        else:
+            # kodas
+    else:
+        # kodas
+</pre>
+
+<p>Pamatėte, kaip galima pakeisti sąlygų naudojimo tvarką <code>if/elif/else</code> pasiekiant tą patį tikslą. Skirtingi programuotojai dažnai naudoja skirtingas strategijas tam pačiam rezultatui pasiekti. Yra ir daugybė kitų būdų, kaip parašyti skirtingas, bet lygiavertes programas.</p>
+<p>Funkcija <code>priekyje_laisva()</code> parodys Robotukui, ar siena užstoja jam kelią, ar ne. Tas pat bus, jei kelią užstos <strong>vandenuo</strong>, <strong>plytinės sienos</strong>, <strong>tvoros</strong> ir kiti objektai, kurių dar nematėme, bet tikriausiai pamatysime būsimuose pasauliuose. Yra funkcija, kuri labiau būdinga sienoms, vadinama <code>priekyje_siena()</code>; palieku jums spėlioti, ką ji daro.</p>
+
+<h2>Pabandykite!</h2>
+<p>Atidarykite <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%2014" target="_blank">Robotuko pasaulio</a> 14 lygį.</p>
+<img alt="../_images/step14.gif" src="_images/step14.gif" />
+<p>Robotukas labai mėgsta pasivaikščioti, ypač prie ežero. Visi Robotuko kaimynystėje esantys ežerai yra skirtingo dydžio stačiakampiai, todėl Robotukas nežino, kiek žingsnių reikės nueiti, kad grįžtų į pasivaikščiojimo pradžią. Laimei, kad Rėborgas nešasi bananą, kurį Robotukas gali <code>apdėti()</code> pasivaikščiojimo pradžioje. Robotukas žinos, kad baigė vaikščioti, kai vėl pasieks bananą.</p>
+<p>Panaudokite <code>while</code> sakinį (ieškodami banano objekto) ir <code>if/else</code>, kad Robotukas galėtų baigti pasivaikščiojimą.</p>
+
+<blockquote>
+    <p>Dėmesio</p>
+    <p>Robotukas negali naudoti <code>repeat</code> sakinio, nes jis nežino kokio dydžio gali būti ežeras.</p>
+</blockquote>
+
+<a href="Step13.html">Lygis 13: If/Elif/Else</a>
+<a href="Content.html">Turinys</a>
+<a href="Step15.html">Lygis 15: Lis lietus!</a>
+
+  </body>
+</html>

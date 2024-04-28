@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Lygis 13: If/Elif/Else</title>
+</head>
+<body>
+<h1>Lygis 13: If/Elif/Else</h1>
+<h2>Mokymosi medžiaga</h2>
+<p>Robotukas gyvena Lietuvoje, kur gali ne tik lyti arba šviesti saulė, bet ir snigti. Sakykime, kad vienu metu gali
+    būti tik vienas iš šių reiškinių. Tuomet,
+    Robotukui gali tekti rinktis iš šių variantų:</p>
+<pre>
+if lyja():
+    žaisti_kambaryje()
+elif sninga():
+    eiti_slidinėti()
+else:
+    eiti_maudytis() # jei pakankamai šilta!
+</pre>
+
+<p>Atkreipkite dėmesį, kad 2 pasirinkimo atveju naudojam <code>elif</code> (tai reiškia "else if" arba "kitu atveju,
+    jei"). Jei atsižvelgtume į kitus galimus orų reiškinius, pavyzdžiui, krušą, griaustinį, rūką, dulksną ir t. t.,
+    galėtume pridėti kitus pasirinkimus naudodami papildomus <code>elif: ...</code> kodo blokus.</p>
+<p>Ši diagrama rodo viršuje esančios programos galimus pasirinkimus:</p>
+<img width="400" alt="Diagrama 13" src="_images/diagrama13.png"/>
+<p>10 lygyje parašėte programą, kurioje Robotukas šokinėja per kliūtis. Jūsų programa greičiausiai buvo tokia:</p>
+<pre>
+def suktis_dešinėn():
+    repeat 3:
+        suktis_kairėn()
+
+def peršokti_kliūtį():
+    # kliūties peršokimo kodas
+
+repeat 5:
+    pirmyn()
+    peršokti_kliūtį()
+</pre>
+
+<p>Nors šis kodas puikiai veikia jūsų pateiktame kliūčių pasaulyje, <strong>jo nepakaktų, jei kliūtys būtų išdėstytos
+    nevienodu atstumu</strong>.</p>
+<p>Toliau pateikiame programos griaučius, užpildžius trūkstamas dalis, turėtų veikti minėtam pasauliui. <em>Pastaba: čia
+    jums gali būti naudinga funkcija `baigti()` (kuri liepia Robotukui nustoti vykdyti komandas).</em></p>
+
+<pre>
+def peršokti_per_kliūtį():
+     # peršokimo kodas
+
+def eiti_šokti_arba_baigti ():
+     if prie_tikslo():
+         # kodas
+     elif priekyje_laisva():
+         # kodas
+     else:
+         # kodas
+
+ repeat 42:  # vėliau pakeisime ir šį kodą...
+     eiti_šokti_arba_baigti()
+</pre>
+
+<p>Atkreipkite dėmesį į <code>if/elif/else</code> sakinių struktūrą; kaip minėta pirmiau - jie suteikia tris
+    pasirinkimus: <strong>tik vienas iš jų bus įvykdytas</strong>.</p>
+
+<h2>Pabandyk!</h2>
+<p>Atidarykite <a href="ree/?lang=lt&mode=python&menu=worlds/menus/sk_menu_lt.json&name=Lygis%2013" target="_blank">Robotuko
+    pasaulio</a> 13 lygį ir nukupijuokite šį kodą:</p>
+<pre>
+def peršokti_per_kliūtį():
+     # peršokimo kodas
+
+def eiti_šokti_arba_baigti ():
+     if prie_tikslo():
+         baigti()  # liepia Robotukui sustoti
+     elif priekyje_laisva():
+         # kodas
+     else:
+         # kodas
+
+ repeat 42:  # vėliau pakeisime ir šį kodą...
+     eiti_šokti_arba_baigti()
+</pre>
+
+<img alt="Step 13" src="_images/step13.png"/>
+<p>Reeborgas vėl šokinėja per kliūtis. Tačiau šį kartą visos kliūtys gali būti ne vienodai nutolusios viena nuo kitos.
+    Turėtumėte naudoti <code>repeat</code> ciklą, kad Robotukas šokinėtų per kliūtis ir baigtų ties tikslu (pozicija -
+    12, 1). Savo programoje <strong>privalote</strong> naudoti <code>if/elif/else</code> struktūrą.</p>
+
+<h2>Jei kyla sunkumų</h2>
+<p>Serija <code>if/elif/ ... /else</code> teiginių prilygsta <strong>pirmam</strong> kodo blokui, kurio sąlyga tenkinama
+    (<code>True</code>), įterpimui. Taigi:</p>
+<pre>
+if False:
+    daryti_1()
+elif True:
+    daryti_2()
+elif True:
+    daryti_3()
+else:
+    daryti_4()
+</pre>
+
+<p>yra tas pat, kas:</p>
+<pre>
+daryti_2()
+</pre>
+<p>tuo tarpu:</p>
+<pre>
+if False:
+    daryti_1()
+elif False:
+    daryti_2()
+elif False:
+    daryti_3()
+else:
+    daryti_4()
+</pre>
+
+<p>yra tas pat, kas:</p>
+<pre>
+daryti_4()
+</pre>
+<p>ir t.t.</p>
+
+<a href="Step12.html">Lygis 12: While</a>
+<a href="Content.html">Turinys</a>
+<a href="Step14.html">Lygis 14: Raktažodis <code>not</code> (ne)</a>
+
+</body>
+</html>
