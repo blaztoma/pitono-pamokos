@@ -1,10 +1,7 @@
 <h1>Robotuko pasauliai</h1>
 <p>Kažkur, toli, toli, vienoje žinomoje planetoje gyvena paprastas robotukas. Jo vardas toks pat paprastas - Robotukas. Jis yra sugedęs, todėl, kai eina - iš jo varva alyva. Taip matosi visas robotuko kelias. Kadangi robotukas paprastas - jis žino tik kelias komandas. Robotukas būtų pasmerktas, tačiau jis supranta Pitoną ir jam labai pasisekė, kad sutiko Jus! Jūs jam padėsite suprogramuoti visas komandas, kurių trūksta kasdieniams darbams atlikti. Taip Robotukas galės padėti savo draugams ir gyventi pilnavertį gyvenimą!</p>
-<a href="Content.html" >
 <img alt="Robotukas" src="_images/robotukas_mini.png"/>
-</a>
 <br/>
-<a href="Content.html" >Turinys (pradėkite čia)</a>
 
 <h2>Apie projektą</h2>
 <p>Šį projektą dariau laisvalaikiu, nes mane sužavėjo Robotuko pasaulio idėja ir jį buvo be galo smagu kurti. Tikiuosi, kad jums bus taip pat smagu jį žaisti!</p>
