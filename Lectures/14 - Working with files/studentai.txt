@@ -1,0 +1,4 @@
+Petras;Petrauskas;22;KTU;8.7
+Inga;Ingauskienė;23;VDU;8.9
+Ugnius;Ugnavičius;21;KTU;8.5
+Gintarė;Gintarytė;22;VDU;8.3

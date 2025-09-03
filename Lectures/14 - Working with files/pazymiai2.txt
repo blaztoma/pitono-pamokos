@@ -1,0 +1,5 @@
+4
+Jonas Petras   3 10 8 9
+Petras         4 9 9 10 10
+Paulina        2 9 8
+Inga           3 10 7 10
